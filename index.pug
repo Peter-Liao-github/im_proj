@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=1440, user-scalable=yes, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="stylesheet/css/myTestSass.css")
+        link(rel="stylesheet", href="jquery-ui-1.12.1.custom/jquery-ui.css")
+    body
+        .outerContainer
+            .bgi
+                img(src="img/bgi1.png", alt="")
+                .innerContainer
+                    .user
+                        img(src="img/userThumb.png", alt="")
+                        p.name User
+                        p.fColorGrey.tokenYours Your AIgatha Token:
+                        p.token 100,000
+                    .introCont
+                            h1.intro1 About iMLOv
+                            p.intro1 We believe that everyone without professional training in informatics is able to master machine learning skills as long as the user-interface is friendly enough. By integrating several well-known machine learning algorithms into an easy-to-use interface, we present the iMLOv system. Using iMLOv can be just making several "next step" clicks. Moreover, this system accepts Excel-compatible CSV files of a simple "one row, one case" format.
+                            p.intro1 
+                                span Machine learning is an important technique for data classification and making predictions/decisions based on known data. It is also a key to big data analysis and artificial intelligence. In this digital era when all types of data increase explosively (proteomics, genomics, public health…), it is expectable that learning machine learning will become necessary for biologists and medical scientists in the near future. However, most machine learning software is inconvenient for users unfamiliar with programming or command-line operating. Hence, we develop this non-expert-friendly system iMLOv, which integrates decision tree, support vector machine, artificial neural network, and random forest algorithms. It also utilizes a genetic algorithm to help perform feature selections. Hopefully this system will become a useful tool for scientists to move their fields forward.
+                            h1.intro2 Welcome to experience AIgatha AI pridictive platform, please choose a project you interested.
+                            .introCol.cursorPt.intro2
+                                h3 Dota2 Games Result Data Set
+                                img(src="img/proj1.png", alt="")
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
+                                p
+                                    strong Raw data volumn : 
+                                    |1728
+                                p
+                                    strong Number of training sets : 
+                                    |1152
+                                .introIcon
+                                    img(src="img/iconQMark.png", alt="").cursorPt
+                                    img(src="img/iconDown.png", alt="").cursorPt
+                            .introCol.cursorPt.intro2
+                                h3 Bank
+                                img(src="img/proj2.png", alt="")
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
+                                p
+                                    strong Raw data volumn : 
+                                    |1728
+                                p
+                                    strong Number of training sets : 
+                                    |1152
+                                .introIcon
+                                    img(src="img/iconQMark.png", alt="").cursorPt
+                                    img(src="img/iconDown.png", alt="").cursorPt
+                            .introCol.cursorPt.intro2
+                                h3 Car Evaluation Data Set
+                                img(src="img/proj3.png", alt="")
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
+                                p
+                                    strong Raw data volumn : 
+                                    |1728
+                                p
+                                    strong Number of training sets : 
+                                    |1152
+                                .introIcon
+                                    img(src="img/iconQMark.png", alt="").cursorPt
+                                    img(src="img/iconDown.png", alt="").cursorPt
+                    .mainContent
+                        .topImg
+                            img.txt1(src="img/diamondDarkest.png", alt="")
+                            img.txt2(src="img/diamondDarker.png", alt="")
+                            img.txt3(src="img/diamondDarker.png", alt="")
+                            img.txt4.ani1fortress(src="img/ani1fortress.png", alt="")
+                            img.txt5.ani1filesRow(src="img/ani1filesRow.png", alt="")
+                            img.txt5.ani1fileSliced(src="img/ani1fileSliced.png", alt="")
+                            img.txt5.ani2miners(src="img/ani2miners.png", alt="")
+                            img.txt5.ani2file.ani2filesCheck1(src="img/ani2filesCheck1.png", alt="")
+                            img.txt5.ani2file.ani2filesCheck2(src="img/ani2filesCheck2.png", alt="")
+                            img.txt5.ani2file.ani2filesCheck3(src="img/ani2filesCheck3.png", alt="")
+                            img.txt5.ani2file.ani2filesCheck4(src="img/ani2filesCheck4.png", alt="")
+                            img.txt5.ani2filesCheckSingle(src="img/ani2filesCheckSingle.png", alt="")
+                            
+                            .txt6
+                                h3 Job ID : 
+                                p J3112214
+                                h3 Return time : 
+                                p 03 : 30 : 56
+                                h3 Job capacity : 
+                                p 10g
+                            .txt6check
+                                .colTxt6Check
+                                    h2 Data
+                                    h3 
+                                        span Features file
+                                        | TBG.csv
+                                    h3
+                                        span Case files
+                                        | Null
+                                    h3
+                                        span Model file
+                                        | Null 
+                                .colTxt6Check
+                                    h2 Tasks to perform
+                                    h3
+                                        span Features files
+                                        | Training
+                                    h3
+                                        span Method
+                                        | N-fold cross validation
+                                    h3
+                                        span Number of fold
+                                        | 3
+                                    h3
+                                        span Grouping method
+                                        | Interval
+                                .colTxt6Check
+                                    h2 Algorithms to integrate
+                                    h3
+                                        span Your algorithms list
+                                        p Support Vector Machine
+                                        p Artificial Neural Network
+                                        p Decision Tree
+                                h2 Setting  of the selected algorithms
+                                .colTxt6Check 
+                                    h3 
+                                        span Support Vector Machine
+                                    h3
+                                        span Forest size
+                                        | 100
+                                    h3
+                                        span Class cases balancing Number
+                                        | max*1
+                                    h3
+                                        span Quick optimization
+                                        | Yes
+                                    h3
+                                        span Log2g trial values
+                                        | iMLOv default
+                                .colTxt6Check 
+                                    h3 
+                                        span Artificial Neural Network
+                                    h3
+                                        span Forest size
+                                        | 100
+                                    h3
+                                        span Class cases balancing Number
+                                        | max*1
+                                    h3
+                                        span Quick optimization
+                                        | Yes
+                                .colTxt6Check 
+                                    h3 
+                                        span Decision Tree
+                                    h3
+                                        span Forest size
+                                        | 100
+                                    h3
+                                        span Class cases balancing Number
+                                        | max*1
+                                    h3
+                                        span Quick optimization
+                                        | Yes
+                            .txt7
+                                .column
+                                    .chart#chart1
+                                        h3 INTERGRATRESD
+                                        p Number of cases : 165.67
+                                        p Correct rate : 
+                                            span.percentNum 3.82
+                                            span.percentSym %
+                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        .circleMaskOuter.left
+                                            .circleMaskInner
+                                                .circleBody
+                                        .circleMaskOuter.right
+                                            .circleMaskInner
+                                                .circleBody
+                                    .chartProgress
+                                        .chartProgItem
+                                            h4 AUC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SEN
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.685
+                                        .chartProgItem
+                                            h4 SPC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.585
+                                        .chartProgItem
+                                            h4 FPR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.225
+                                        .chartProgItem
+                                            h4 FNR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.050
+                                        .chartProgItem
+                                            h4 MCC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.685
+                                .column
+                                    .chart#chart2
+                                        h3 INTERGRATRESD
+                                        p Number of cases : 165.67
+                                        p Correct rate : 
+                                            span.percentNum 5.42
+                                            span.percentSym %
+                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        .circleMaskOuter.left
+                                            .circleMaskInner
+                                                .circleBody
+                                        .circleMaskOuter.right
+                                            .circleMaskInner
+                                                .circleBody
+                                    .chartProgress
+                                        .chartProgItem
+                                            h4 AUC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SEN
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SPC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.785
+                                        .chartProgItem
+                                            h4 FPR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.225
+                                        .chartProgItem
+                                            h4 FNR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.050
+                                        .chartProgItem
+                                            h4 MCC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.685
+                                .column
+                                    .chart#chart3
+                                        h3 Support Vector Machine
+                                        p Number of cases : 165.67
+                                        p Correct rate : 
+                                            span.percentNum 4.38
+                                            span.percentSym %
+                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        .circleMaskOuter.left
+                                            .circleMaskInner
+                                                .circleBody
+                                        .circleMaskOuter.right
+                                            .circleMaskInner
+                                                .circleBody
+                                    .chartProgress
+                                        .chartProgItem
+                                            h4 AUC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SEN
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SPC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.785
+                                        .chartProgItem
+                                            h4 FPR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.225
+                                        .chartProgItem
+                                            h4 FNR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.050
+                                        .chartProgItem
+                                            h4 MCC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.685
+                                .column
+                                    .chart#chart4
+                                        h3 Support Vector Machine
+                                        p Number of cases : 165.67
+                                        p Correct rate : 
+                                            span.percentNum 1.42
+                                            span.percentSym %
+                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        .circleMaskOuter.left
+                                            .circleMaskInner
+                                                .circleBody
+                                        .circleMaskOuter.right
+                                            .circleMaskInner
+                                                .circleBody
+                                    .chartProgress
+                                        .chartProgItem
+                                            h4 AUC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SEN
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.985
+                                        .chartProgItem
+                                            h4 SPC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.785
+                                        .chartProgItem
+                                            h4 FPR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.225
+                                        .chartProgItem
+                                            h4 FNR
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.050
+                                        .chartProgItem
+                                            h4 MCC
+                                            .progressOuter
+                                                .progressInner
+                                            p 0.685
+                                .columnFooter
+                                    p Thank you, click the right button to share this experience and get rewards.
+                            .txt7mask
+                        .textBlock
+                            p.txt1 Hi, welcome to IM platform, Everyone have 100,000 ATH to exprience this game, choose your project first.
+                            p.txt2 Then , select your computing tool. The more options you choose, the more precise operation and the better result.
+                            p.txt3 Next step, upload your project data to your computer for quick assessment.
+                            p.txt5 Let's check it, now.
+                            p.txt6 This is your task. Please select the calculation settings. You will be able to know the time and cost of the assessment.
+                        .option.txt1
+                            h2 Task
+                            form.txt1
+                                input(type="radio" name="task" id="Training" checked)
+                                label(for="Training") Training
+                                input(type="radio" name="task" id="Independent test" disabled)
+                                label(for="Independent test") Independent test
+                                input(type="radio" name="task" id="Prediction" disabled)
+                                label(for="Prediction") Prediction
+                                input(type="submit", value="Next >")
+                        .option.txt2
+                            h2 Algorithms
+                            form.txt2
+                                .formColumn
+                                    .t2colInput
+                                        input(type="checkbox" name="algorithmSVM" id="supVMinputCheck")
+                                        label(for="supVMinputCheck") Support Vector Machine
+                                        br
+                                        |
+                                        label(for="supVMinputFzText") Forest size : 
+                                        input(type="text" name="forestSzSVM" id="supVMinputFzText" value="100" disabled)
+                                        br
+                                        |
+                                        label(for="supVMinputCbText") Class cases balancing number : 
+                                        input(type="text" name="classCasesSVM" id="supVMinputCbText" value="max*1" disabled)
+                                        br
+                                        |Quick optimization : 
+                                        input(type="radio" name="quiOptmztionSVM" id="supVMinputRadioY" checked disabled)
+                                        label(for="supVMinputRadioY") Yes
+                                        input(type="radio" name="quiOptmztionSVM" id="supVMinputRadioN" disabled)
+                                        label(for="supVMinputRadioN") No
+                                    .t2colInput
+                                        input(type="checkbox" name="algorithmANN" id="artiNNinputCheck")
+                                        label(for="artiNN") Artificial Noural Network
+                                        br
+                                        |
+                                        label(for="artiNNinputFzText") Forest size : 
+                                        input(type="text" name="forestSzANN" id="artiNNinputFzText" value="100" disabled)
+                                        br
+                                        |
+                                        label(for="artiNNinputCbText") Class cases balancing number : 
+                                        input(type="text" name="classCasesANN" id="artiNNinputCbText" value="max*1" disabled)
+                                        br
+                                        |Quick optimization : 
+                                        input(type="radio" name="quiOptmztionANN" id="artiNNinputRadioY" checked disabled)
+                                        label(for="artiNNinputRadioY") Yes
+                                        input(type="radio" name="quiOptmztionANN" id="artiNNinputRadioN" disabled)
+                                        label(for="artiNNinputRadioN") No
+                                    .t2colInput
+                                        input(type="checkbox" name="algorithmDT" id="deciTreeinputCheck")
+                                        label(for="deciTree") Decision Tree
+                                        br
+                                        |
+                                        label(for="deciTreeinputFzText") Forest size : 
+                                        input(type="text" name="forestSzDT" id="deciTreeinputFzText" value="100" disabled)
+                                        br
+                                        |
+                                        label(for="deciTreeinputCbText") Class cases balancing number : 
+                                        input(type="text" name="classCasesDT" id="deciTreeinputCbText" value="max*1" disabled)
+                                        br
+                                        |Quick optimization : 
+                                        input(type="radio" name="quiOptmztionDT" id="deciTreeinputRadioY" checked disabled)
+                                        label(for="deciTreeinputRadioY") Yes
+                                        input(type="radio" name="quiOptmztionDT" id="deciTreeinputRadioN" disabled)
+                                        label(for="deciTreeinputRadioN") No
+                                input(type="submit", value="Next >") 
+                        .option.txt3
+                            h2 Data
+                            form.txt3
+                                input(type="radio" name="data" id="excel" disabled)
+                                label(for="excel") Excel/CSV files upload
+                                input(type="radio" name="data" id="standard" disabled)
+                                label(for="standard") Standard iMLOv input files upload
+                                input(type="radio" name="data" id="template" checked)
+                                label(for="template") template project
+                                input(type="radio" name="data" id="previous" disabled)
+                                label(for="previous") Previous Job ID
+                                input(type="submit", value="Next >") 
+                        .option.txt4
+                            .txt5.progressOuter
+                                .progressInner
+                            img.ani1monitor(src="img/ani1monitor.png", alt="")
+                            img.ani1fileSingle(src="img/ani1fileSingle.png", alt="")
+                        .option.txt6
+                            h3
+                            label(for="amountTask") Task aliquots:
+                            input#amountTask(type="text", name="amountTask")
+                            #slider.sliderTask
+                            h3
+                            label(for="amountMiner") Miners:
+                            input#amountMiner(type="text", name="amountMiner")
+                            #slider.sliderMiners
+                        .hint
+                            form.txt1
+                                input(type="radio" name="task" id="Testing" disabled)
+                                label(for="Testing") Testing
+                        .widerHint 
+                            p.txt1 Select the tasks you would like to perform. Additional option will appears as you hit the checkboxes.
+                            p.txt4.textBlock The mission will be uploaded to the Chronos Fortress,
+                                br
+                                |after evaluation of the operation, the return data.
+                            p.txt5.textBlock The machine will cut the project into equal parts, 
+                                br
+                                |extract one of them and evaluate the report.
+                            .txt6
+                                .cost.costTime
+                                    img(src="img/iconTime.png", alt="")
+                                    .progressOuter
+                                        .progressInner
+                                    #costTimeTxt  
+                                        span 27.5
+                                        |  hr
+                                .cost.costCoin
+                                    img(src="img/iconAIcoin.png", alt="")
+                                    .progressOuter
+                                        .progressInner
+                                    #costCoinTxt 
+                                        span 7000
+                                        |  ATH
+                    .nextBtn.cursorPt.next.intro1 Next >
+                    .nextBtn.cursorPt.next.txt1 Next >
+                    .nextBtn.cursorPt.next.txt2 Next >
+                    .nextBtn.cursorPt.next.txt3 Next >
+                    .nextBtn.cursorPt.next.txt4 Next >
+                    .nextBtn.cursorPt.next.txt5 Next >
+                    .nextBtn.cursorPt.next.txt6 Next >
+                    .nextBtn.txt7
+                        a(href="#", title="title")
+                            img(src="img/iconShare.png", alt="").share 
+                .footer
+                    .footerInner.fColorGrey The intergrated Machine Learning and Optimization Server
+                        img(src="img/logoCorner.png", alt="")
+
+    script(src="jquery-3.3.1.min.js")
+    script(src="jquery-ui-1.12.1.custom/jquery-ui.js")
+    script(src="myScript.js")
