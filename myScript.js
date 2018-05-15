@@ -78,13 +78,15 @@ $(function() {
                 $circleLeft = $chart.find('.left .circleMaskInner').css({transform: 'rotate(0)'}),
                 $circleRight = $chart.find('.right .circleMaskInner').css({transform: 'rotate(0)'}),
                 $percentNum = $chart.find('.percentNum'),
+                $percentNumError = $chart.find('.percentNumError'),
                 percentData = 100 - $percentNum.text();
 
             $percentNum.text(0);
+            $percentNumError.text(0);
 
-            $({ percent: 0}).delay(1000).animate({
+            $({ percent: 0}).delay(800).animate({
                 percent: percentData
-            }, {duration:1500,
+            }, {duration:1200,
                 progress: function () {
                     var now = this.percent,
                         deg = now * 360/100,
@@ -93,6 +95,7 @@ $(function() {
                     $circleRight.css({transform: 'rotate(' + degRight + 'deg)'});
                     $circleLeft.css({transform: 'rotate(' + degLeft + 'deg)'});
                     $percentNum.text(Math.floor(now * 100)/100);
+                    $percentNumError.text(Math.floor((100 - now) * 100)/100);
                 }
             });
         });
@@ -190,7 +193,6 @@ $(function() {
                     $('.txt6').css('display','none');
                     $('p.token').text( 100000 - $( "#costCoinTxt span" ).text() );
                     $('.txt6check').css('display','');
-
                     break;
 
                 case 'txt6check':
@@ -199,19 +201,20 @@ $(function() {
                     $('.ani2file').css('display','');
                     $('.ani2filesCheckSingle').css('display','');
                     $('.ani1fortress').css('display','');
-                    $('.ani1filesRow').css({animation: 'fInToDown 1.5s 0.5s 1 both' ,display:''});
-                    $('.ani1fileSliced').css({animation: 'fInToDown 1.5s 0.5s 1 both' ,display:''});
+                    $('.ani1filesRow').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
+                    $('.ani1fileSliced').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
                     $('.txt7pre').css('display','');
                     break;
             
                 case 'txt7pre':
+                    $('.txt7pre').css('display','none');
                     $('.ani2miners').css('display','none');
                     $('.ani2file').css('display','none');
                     $('.ani2filesCheckSingle').css('display','none');
                     $('.ani1fortress').css('display','none');
-                    $('.ani1filesRow').css('animation','');
-                    $('.ani1fileSliced').css('animation','');
-                    $('.txt7').css('display','none');
+                    $('.ani1filesRow').css('display','none');
+                    $('.ani1fileSliced').css('display','none');
+                    $('.txt7').css('display','');
                     activateChart();
                     activateChart2();
                     break;
@@ -230,12 +233,17 @@ $(function() {
             var sum = 0;
             $diamondCB.each(function() {
                 $this = $(this);
+                uncheckedClass = $this.attr('class').substr(9);
                 if ($this.prop('checked')) {
                     sum += parseInt(($this.val()));
                     diamondBrighten(sum);
+                    $('.colTxt6Check.'+uncheckedClass).css({opacity:1,textDecoration:'none'});
+                    $('p.'+uncheckedClass).css({opacity:1,textDecoration:'none'});
                 } else if (!$this.prop('checked')){
                     sum -= $this.val();
                     diamondBrighten(sum);
+                    $('.colTxt6Check.'+uncheckedClass).css({opacity:0.4,textDecoration:'line-through'});
+                    $('p.'+uncheckedClass).css({opacity:0.4,textDecoration:'line-through'});
                 }
             })
             

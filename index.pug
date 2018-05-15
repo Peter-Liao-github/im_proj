@@ -118,11 +118,11 @@ html(lang="en")
                                     h2 Algorithms to integrate
                                     h3
                                         span Your algorithms list
-                                        p Support Vector Machine
-                                        p Artificial Neural Network
-                                        p Decision Tree
+                                        p.svm Support Vector Machine
+                                        p.ann Artificial Neural Network
+                                        p.dt Decision Tree
                                 h2 Setting  of the selected algorithms
-                                .colTxt6Check 
+                                .colTxt6Check.svm 
                                     h3 
                                         span Support Vector Machine
                                     h3
@@ -137,7 +137,7 @@ html(lang="en")
                                     h3
                                         span Log2g trial values
                                         | iMLOv default
-                                .colTxt6Check 
+                                .colTxt6Check.ann 
                                     h3 
                                         span Artificial Neural Network
                                     h3
@@ -149,7 +149,7 @@ html(lang="en")
                                     h3
                                         span Quick optimization
                                         | Yes
-                                .colTxt6Check 
+                                .colTxt6Check.dt 
                                     h3 
                                         span Decision Tree
                                     h3
@@ -168,6 +168,9 @@ html(lang="en")
                                         p Number of cases : 165.67
                                         p Correct rate : 
                                             span.percentNum 3.82
+                                            span.percentSym %
+                                        p Error rate : 
+                                            span.percentNumError 3.82
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
                                         .circleMaskOuter.left
@@ -214,6 +217,9 @@ html(lang="en")
                                         p Correct rate : 
                                             span.percentNum 5.42
                                             span.percentSym %
+                                        p Error rate : 
+                                            span.percentNumError 5.42
+                                            span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
                                         .circleMaskOuter.left
                                             .circleMaskInner
@@ -258,6 +264,9 @@ html(lang="en")
                                         p Number of cases : 165.67
                                         p Correct rate : 
                                             span.percentNum 4.38
+                                            span.percentSym %
+                                        p Error rate : 
+                                            span.percentNumError 4.38
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
                                         .circleMaskOuter.left
@@ -304,6 +313,9 @@ html(lang="en")
                                         p Correct rate : 
                                             span.percentNum 1.42
                                             span.percentSym %
+                                        p Error rate : 
+                                            span.percentNumError 1.42
+                                            span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
                                         .circleMaskOuter.left
                                             .circleMaskInner
@@ -326,7 +338,7 @@ html(lang="en")
                                             h4 SPC
                                             .progressOuter
                                                 .progressInner
-                                            p 0.785
+                                            p 0.285
                                         .chartProgItem
                                             h4 FPR
                                             .progressOuter
@@ -366,7 +378,7 @@ html(lang="en")
                             form.txt2
                                 .formColumn
                                     .t2colInput
-                                        input.cursorPt(type="checkbox" name="algorithmSVM" id="supVMinputCheck" value="1")
+                                        input.cursorPt.svm(type="checkbox" name="algorithmSVM" id="supVMinputCheck" value="1")
                                         label.cursorPt(for="supVMinputCheck") Support Vector Machine
                                         br
                                         |
@@ -383,7 +395,7 @@ html(lang="en")
                                         input(type="radio" name="quiOptmztionSVM" id="supVMinputRadioN" disabled)
                                         label(for="supVMinputRadioN") No
                                     .t2colInput
-                                        input.cursorPt(type="checkbox" name="algorithmANN" id="artiNNinputCheck" value="1")
+                                        input.cursorPt.ann(type="checkbox" name="algorithmANN" id="artiNNinputCheck" value="1")
                                         label.cursorPt(for="artiNNinputCheck") Artificial Noural Network
                                         br
                                         |
@@ -400,7 +412,7 @@ html(lang="en")
                                         input(type="radio" name="quiOptmztionANN" id="artiNNinputRadioN" disabled)
                                         label(for="artiNNinputRadioN") No
                                     .t2colInput
-                                        input.cursorPt(type="checkbox" name="algorithmDT" id="deciTreeinputCheck" value="1")
+                                        input.cursorPt.dt(type="checkbox" name="algorithmDT" id="deciTreeinputCheck" value="1")
                                         label.cursorPt(for="deciTreeinputCheck") Decision Tree
                                         br
                                         |

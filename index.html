@@ -76,26 +76,26 @@
                 <div class="colTxt6Check">
                   <h2>Algorithms to integrate</h2>
                   <h3><span>Your algorithms list</span>
-                    <p>Support Vector Machine</p>
-                    <p>Artificial Neural Network</p>
-                    <p>Decision Tree</p>
+                    <p class="svm">Support Vector Machine</p>
+                    <p class="ann">Artificial Neural Network</p>
+                    <p class="dt">Decision Tree</p>
                   </h3>
                 </div>
                 <h2>Setting  of the selected algorithms</h2>
-                <div class="colTxt6Check"> 
+                <div class="colTxt6Check svm"> 
                   <h3> <span>Support Vector Machine</span></h3>
                   <h3><span>Forest size</span>100</h3>
                   <h3><span>Class cases balancing Number</span>max*1</h3>
                   <h3><span>Quick optimization</span>Yes</h3>
                   <h3><span>Log2g trial values</span>iMLOv default</h3>
                 </div>
-                <div class="colTxt6Check"> 
+                <div class="colTxt6Check ann"> 
                   <h3> <span>Artificial Neural Network</span></h3>
                   <h3><span>Forest size</span>100</h3>
                   <h3><span>Class cases balancing Number</span>max*1</h3>
                   <h3><span>Quick optimization</span>Yes</h3>
                 </div>
-                <div class="colTxt6Check"> 
+                <div class="colTxt6Check dt"> 
                   <h3> <span>Decision Tree</span></h3>
                   <h3><span>Forest size</span>100</h3>
                   <h3><span>Class cases balancing Number</span>max*1</h3>
@@ -107,7 +107,8 @@
                   <div class="chart" id="chart1">
                     <h3>INTERGRATRESD</h3>
                     <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">3.82</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <p>Correct rate : <span class="percentNum">3.82</span><span class="percentSym">%</span></p>
+                    <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
                     <div class="circleMaskOuter left">
                       <div class="circleMaskInner">
                         <div class="circleBody"></div>
@@ -168,7 +169,8 @@
                   <div class="chart" id="chart2">
                     <h3>INTERGRATRESD</h3>
                     <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">5.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <p>Correct rate : <span class="percentNum">5.42</span><span class="percentSym">%</span></p>
+                    <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
                     <div class="circleMaskOuter left">
                       <div class="circleMaskInner">
                         <div class="circleBody"></div>
@@ -229,7 +231,8 @@
                   <div class="chart" id="chart3">
                     <h3>Support Vector Machine</h3>
                     <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">4.38</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <p>Correct rate : <span class="percentNum">4.38</span><span class="percentSym">%</span></p>
+                    <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
                     <div class="circleMaskOuter left">
                       <div class="circleMaskInner">
                         <div class="circleBody"></div>
@@ -290,7 +293,8 @@
                   <div class="chart" id="chart4">
                     <h3>Support Vector Machine</h3>
                     <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">1.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <p>Correct rate : <span class="percentNum">1.42</span><span class="percentSym">%</span></p>
+                    <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
                     <div class="circleMaskOuter left">
                       <div class="circleMaskInner">
                         <div class="circleBody"></div>
@@ -322,7 +326,7 @@
                       <div class="progressOuter">
                         <div class="progressInner"></div>
                       </div>
-                      <p>0.785</p>
+                      <p>0.285</p>
                     </div>
                     <div class="chartProgItem">
                       <h4>FPR</h4>
@@ -377,7 +381,7 @@
               <form class="txt2">
                 <div class="formColumn">
                   <div class="t2colInput">
-                    <input class="cursorPt" type="checkbox" name="algorithmSVM" id="supVMinputCheck" value="1"/>
+                    <input class="cursorPt svm" type="checkbox" name="algorithmSVM" id="supVMinputCheck" value="1"/>
                     <label class="cursorPt" for="supVMinputCheck">Support Vector Machine</label><br/>
                     <label for="supVMinputFzText">Forest size : </label>
                     <input type="text" name="forestSzSVM" id="supVMinputFzText" value="100" disabled="disabled"/><br/>
@@ -389,7 +393,7 @@
                     <label for="supVMinputRadioN">No</label>
                   </div>
                   <div class="t2colInput">
-                    <input class="cursorPt" type="checkbox" name="algorithmANN" id="artiNNinputCheck" value="1"/>
+                    <input class="cursorPt ann" type="checkbox" name="algorithmANN" id="artiNNinputCheck" value="1"/>
                     <label class="cursorPt" for="artiNNinputCheck">Artificial Noural Network</label><br/>
                     <label for="artiNNinputFzText">Forest size : </label>
                     <input type="text" name="forestSzANN" id="artiNNinputFzText" value="100" disabled="disabled"/><br/>
@@ -401,7 +405,7 @@
                     <label for="artiNNinputRadioN">No</label>
                   </div>
                   <div class="t2colInput">
-                    <input class="cursorPt" type="checkbox" name="algorithmDT" id="deciTreeinputCheck" value="1"/>
+                    <input class="cursorPt dt" type="checkbox" name="algorithmDT" id="deciTreeinputCheck" value="1"/>
                     <label class="cursorPt" for="deciTreeinputCheck">Decision Tree</label><br/>
                     <label for="deciTreeinputFzText">Forest size : </label>
                     <input type="text" name="forestSzDT" id="deciTreeinputFzText" value="100" disabled="disabled"/><br/>
