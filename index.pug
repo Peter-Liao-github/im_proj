@@ -4,9 +4,12 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=1440, user-scalable=yes, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        title iMLOv
         link(rel="stylesheet", href="stylesheet/css/myTestSass.css")
         link(rel="stylesheet", href="jquery-ui-1.12.1.custom/jquery-ui.css")
+        script(src="jquery-3.3.1.min.js")
+        script(src="jquery-ui-1.12.1.custom/jquery-ui.js")
+        script(src="myScript.js")
     body
         .outerContainer
             .bgi
@@ -16,52 +19,53 @@ html(lang="en")
                         img(src="img/userThumb.png", alt="")
                         p.name User
                         p.fColorGrey.tokenYours Your AIgatha Token:
-                        p.token 100,000
+                        p.token 100000
                     .introCont
                             h1.intro1 About iMLOv
                             p.intro1 We believe that everyone without professional training in informatics is able to master machine learning skills as long as the user-interface is friendly enough. By integrating several well-known machine learning algorithms into an easy-to-use interface, we present the iMLOv system. Using iMLOv can be just making several "next step" clicks. Moreover, this system accepts Excel-compatible CSV files of a simple "one row, one case" format.
                             p.intro1 
                                 span Machine learning is an important technique for data classification and making predictions/decisions based on known data. It is also a key to big data analysis and artificial intelligence. In this digital era when all types of data increase explosively (proteomics, genomics, public health…), it is expectable that learning machine learning will become necessary for biologists and medical scientists in the near future. However, most machine learning software is inconvenient for users unfamiliar with programming or command-line operating. Hence, we develop this non-expert-friendly system iMLOv, which integrates decision tree, support vector machine, artificial neural network, and random forest algorithms. It also utilizes a genetic algorithm to help perform feature selections. Hopefully this system will become a useful tool for scientists to move their fields forward.
                             h1.intro2 Welcome to experience AIgatha AI pridictive platform, please choose a project you interested.
-                            .introCol.cursorPt.intro2
-                                h3 Dota2 Games Result Data Set
-                                img(src="img/proj1.png", alt="")
-                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
-                                p
-                                    strong Raw data volumn : 
-                                    |1728
-                                p
-                                    strong Number of training sets : 
-                                    |1152
-                                .introIcon
-                                    img(src="img/iconQMark.png", alt="").cursorPt
-                                    img(src="img/iconDown.png", alt="").cursorPt
-                            .introCol.cursorPt.intro2
-                                h3 Bank
-                                img(src="img/proj2.png", alt="")
-                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
-                                p
-                                    strong Raw data volumn : 
-                                    |1728
-                                p
-                                    strong Number of training sets : 
-                                    |1152
-                                .introIcon
-                                    img(src="img/iconQMark.png", alt="").cursorPt
-                                    img(src="img/iconDown.png", alt="").cursorPt
-                            .introCol.cursorPt.intro2
-                                h3 Car Evaluation Data Set
-                                img(src="img/proj3.png", alt="")
-                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
-                                p
-                                    strong Raw data volumn : 
-                                    |1728
-                                p
-                                    strong Number of training sets : 
-                                    |1152
-                                .introIcon
-                                    img(src="img/iconQMark.png", alt="").cursorPt
-                                    img(src="img/iconDown.png", alt="").cursorPt
+                            .introOuter.intro2
+                                .introCol.cursorPt.intro2
+                                    h3 Dota2 Games Result Data Set
+                                    img(src="img/proj1.png", alt="")
+                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
+                                    p
+                                        strong Raw data volumn : 
+                                        |1728
+                                    p
+                                        strong Number of training sets : 
+                                        |1152
+                                    .introIcon
+                                        img(src="img/iconQMark.png", alt="").cursorPt
+                                        img(src="img/iconDown.png", alt="").cursorPt
+                                .introCol.cursorPt.intro2
+                                    h3 Bank
+                                    img(src="img/proj2.png", alt="")
+                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
+                                    p
+                                        strong Raw data volumn : 
+                                        |1728
+                                    p
+                                        strong Number of training sets : 
+                                        |1152
+                                    .introIcon
+                                        img(src="img/iconQMark.png", alt="").cursorPt
+                                        img(src="img/iconDown.png", alt="").cursorPt
+                                .introCol.cursorPt.intro2
+                                    h3 Car Evaluation Data Set
+                                    img(src="img/proj3.png", alt="")
+                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
+                                    p
+                                        strong Raw data volumn : 
+                                        |1728
+                                    p
+                                        strong Number of training sets : 
+                                        |1152
+                                    .introIcon
+                                        img(src="img/iconQMark.png", alt="").cursorPt
+                                        img(src="img/iconDown.png", alt="").cursorPt
                     .mainContent
                         .topImg
                             img.txt1(src="img/diamondDarkest.png", alt="")
@@ -362,8 +366,8 @@ html(lang="en")
                             form.txt2
                                 .formColumn
                                     .t2colInput
-                                        input(type="checkbox" name="algorithmSVM" id="supVMinputCheck")
-                                        label(for="supVMinputCheck") Support Vector Machine
+                                        input.cursorPt(type="checkbox" name="algorithmSVM" id="supVMinputCheck" value="1")
+                                        label.cursorPt(for="supVMinputCheck") Support Vector Machine
                                         br
                                         |
                                         label(for="supVMinputFzText") Forest size : 
@@ -379,8 +383,8 @@ html(lang="en")
                                         input(type="radio" name="quiOptmztionSVM" id="supVMinputRadioN" disabled)
                                         label(for="supVMinputRadioN") No
                                     .t2colInput
-                                        input(type="checkbox" name="algorithmANN" id="artiNNinputCheck")
-                                        label(for="artiNN") Artificial Noural Network
+                                        input.cursorPt(type="checkbox" name="algorithmANN" id="artiNNinputCheck" value="1")
+                                        label.cursorPt(for="artiNNinputCheck") Artificial Noural Network
                                         br
                                         |
                                         label(for="artiNNinputFzText") Forest size : 
@@ -396,8 +400,8 @@ html(lang="en")
                                         input(type="radio" name="quiOptmztionANN" id="artiNNinputRadioN" disabled)
                                         label(for="artiNNinputRadioN") No
                                     .t2colInput
-                                        input(type="checkbox" name="algorithmDT" id="deciTreeinputCheck")
-                                        label(for="deciTree") Decision Tree
+                                        input.cursorPt(type="checkbox" name="algorithmDT" id="deciTreeinputCheck" value="1")
+                                        label.cursorPt(for="deciTreeinputCheck") Decision Tree
                                         br
                                         |
                                         label(for="deciTreeinputFzText") Forest size : 
@@ -457,29 +461,28 @@ html(lang="en")
                                     .progressOuter
                                         .progressInner
                                     #costTimeTxt  
-                                        span 27.5
+                                        span 25
                                         |  hr
                                 .cost.costCoin
                                     img(src="img/iconAIcoin.png", alt="")
                                     .progressOuter
                                         .progressInner
                                     #costCoinTxt 
-                                        span 7000
+                                        span 8000
                                         |  ATH
                     .nextBtn.cursorPt.next.intro1 Next >
+                    .nextBtn.cursorPt.next.intro2 Next >
                     .nextBtn.cursorPt.next.txt1 Next >
                     .nextBtn.cursorPt.next.txt2 Next >
                     .nextBtn.cursorPt.next.txt3 Next >
                     .nextBtn.cursorPt.next.txt4 Next >
                     .nextBtn.cursorPt.next.txt5 Next >
                     .nextBtn.cursorPt.next.txt6 Next >
+                    .nextBtn.cursorPt.next.txt6check Next >
+                    .nextBtn.cursorPt.next.txt7pre Next >
                     .nextBtn.txt7
                         a(href="#", title="title")
                             img(src="img/iconShare.png", alt="").share 
                 .footer
                     .footerInner.fColorGrey The intergrated Machine Learning and Optimization Server
                         img(src="img/logoCorner.png", alt="")
-
-    script(src="jquery-3.3.1.min.js")
-    script(src="jquery-ui-1.12.1.custom/jquery-ui.js")
-    script(src="myScript.js")

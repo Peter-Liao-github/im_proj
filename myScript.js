@@ -9,16 +9,17 @@ $(function() {
             progressInnerTimeWidth,
             progressInnerCoinWidth;
         
-            $progressInnerTime = $costTime.find('.progressInner').css({width: '55%'});
-            $progressInnerCoin = $costCoin.find('.progressInner').css({width: '46%'});
+            $progressInnerTime = $costTime.find('.progressInner').css({width: '50%'});
+            $progressInnerCoin = $costCoin.find('.progressInner').css({width: '40%'});
         $( ".sliderTask" ).slider({
             value:70,
             min: 10,
             max: 100,
             step: 10,
             slide: function( eventTask, uiTask ) {
-                $cofTask = uiTask.value;
-                    
+                $cofTask = uiTask.value,
+                miner = $('#amountMiner').val();
+
                 $( "#amountTask" ).val( $cofTask );
 
                 if ($cofTask<70) {
@@ -26,14 +27,14 @@ $(function() {
                 } else {
                     progressInnerTimeWidth = 70/2 + ($cofTask-70)/6 
                 }
+                $( "#costTimeTxt span" ).text( Math.floor(95 - progressInnerTimeWidth)/2 - miner*10/8 );
+                $( "#costCoinTxt span" ).text( $cofTask * 100 + miner*500 );
                 $progressInnerTime.animate(
-                    {width : 90 - progressInnerTimeWidth + '%'} , 100
+                    {width : $( "#costTimeTxt span" ).text()/50 *100 + '%'} , 100
                 )
                 $progressInnerCoin.animate(
-                    {width : 20 + $cofTask * 50/100 + '%'} , 100
+                    {width : $( "#costCoinTxt span" ).text()/20000 *100 + '%'} , 100
                 )
-                $( "#costTimeTxt span" ).text( Math.floor(90 - progressInnerTimeWidth)/2 );
-                $( "#costCoinTxt span" ).text( $cofTask * 100 );
             }
         });
         
@@ -44,16 +45,22 @@ $(function() {
             step: 1,
             slide: function( eventMiners, uiMiners ) {
                 $cofMiner = uiMiners.value,
-                timeTotalWidthDeci = 50,
-                $timeNowWidthDeci = $("#costTimeTxt span").text(),
-                progressInnerTimeWidth = ($timeNowWidthDeci / timeTotalWidthDeci * 100 - $cofMiner * 10/4 );
+                taAliq = $( "#amountTask" ).val();
+                if (taAliq<70) {
+                    taAliqT = taAliq/2
+                } else {
+                    taAliqT = 70/2 + (taAliq-70)/6 
+                }
 
                 $( "#amountMiner" ).val( $cofMiner );
+                $( "#costTimeTxt span" ).text( Math.floor(95 - taAliqT)/2 - $cofMiner*10/8 );
+                $( "#costCoinTxt span" ).text( taAliq * 100 + $cofMiner*500 );
                 $progressInnerTime.animate(
-                    {width : progressInnerTimeWidth + '%'} , 100
+                    {width : $( "#costTimeTxt span" ).text()/50 *100 + '%'} , 100
                 )
-                // $( "#costTimeTxt span" ).text(  );
-                // $( "#costCoinTxt span" ).text(  );
+                $progressInnerCoin.animate(
+                    {width : $( "#costCoinTxt span" ).text()/20000 *100 + '%'} , 100
+                )
             }
         });
 
@@ -61,8 +68,7 @@ $(function() {
         $( "#amountMiner" ).val(  $( ".sliderMiners" ).slider( "value" ) );
         
     }
-
-    activateChart();
+    
     function activateChart(){
         var $content = $('.column'),
             $charts = $content.find('.chart');
@@ -91,7 +97,7 @@ $(function() {
             });
         });
     }
-    activateChart2();
+    
     function activateChart2() {
         var $content = $('.column'),
             $chartProgItems = $content.find('.chartProgItem');
@@ -128,9 +134,8 @@ $(function() {
 
     nextButton();
     function nextButton() {
-        var allPageClass = ['intro1','intro2','txt1','txt2','txt3','p.txt4','txt4','txt5','txt6','txt6check','txt7','txt7mask'],
+        var allPageClass = ['intro1','intro2','txt1','txt2','txt3','p.txt4','txt4','txt5','txt6','txt6check','txt7pre','txt7','txt7mask'],
             $next = $('.next');
-
 
         for (let index = 1; index < allPageClass.length; index++) {
             const element = allPageClass[index];
@@ -166,25 +171,99 @@ $(function() {
                     break;
             
                 case 'txt4':
-                    $('.txt4').css('display','none');
+                    $('p.txt4').css('display','none');
                     $('.txt5').css('display','');
+                    $('.next.txt4').css('display','none');
+                    $('.ani2miners').css('display','none');
+                    $('.ani2file').css('display','none');
+                    $('.ani2filesCheckSingle').css('display','none');
+                    $('.option.txt4>img').css('opacity','0');
                     break;
             
                 case 'txt5':
+                    $('.txt4').css('display','none');
                     $('.txt5').css('display','none');
                     $('.txt6').css('display','');
                     break;
             
                 case 'txt6':
                     $('.txt6').css('display','none');
-                    $('.txt7').css('display','');
+                    $('p.token').text( 100000 - $( "#costCoinTxt span" ).text() );
+                    $('.txt6check').css('display','');
+
+                    break;
+
+                case 'txt6check':
+                    $('.txt6check').css('display','none');
+                    $('.ani2miners').css('display','');
+                    $('.ani2file').css('display','');
+                    $('.ani2filesCheckSingle').css('display','');
+                    $('.ani1fortress').css('display','');
+                    $('.ani1filesRow').css({animation: 'fInToDown 1.5s 0.5s 1 both' ,display:''});
+                    $('.ani1fileSliced').css({animation: 'fInToDown 1.5s 0.5s 1 both' ,display:''});
+                    $('.txt7pre').css('display','');
                     break;
             
-                case 'txt7':
+                case 'txt7pre':
+                    $('.ani2miners').css('display','none');
+                    $('.ani2file').css('display','none');
+                    $('.ani2filesCheckSingle').css('display','none');
+                    $('.ani1fortress').css('display','none');
+                    $('.ani1filesRow').css('animation','');
+                    $('.ani1fileSliced').css('animation','');
+                    $('.txt7').css('display','none');
+                    activateChart();
+                    activateChart2();
                     break;
-                    
+
                 default:
                     break;
+            }
+        })
+    }
+
+    diamondCheckBox();
+    function diamondCheckBox() {
+        var $diamondCB = $('.t2colInput>input:first-child')
+        $('.next.txt2').css('opacity','0');
+        $diamondCB.click(function() {
+            var sum = 0;
+            $diamondCB.each(function() {
+                $this = $(this);
+                if ($this.prop('checked')) {
+                    sum += parseInt(($this.val()));
+                    diamondBrighten(sum);
+                } else if (!$this.prop('checked')){
+                    sum -= $this.val();
+                    diamondBrighten(sum);
+                }
+            })
+            
+            function diamondBrighten(sum){
+                switch (sum) {
+                    case -3:
+                        $('.topImg img.txt2').attr('src','img/diamondDarker.png')
+                        $('.topImg img.txt3').attr('src','img/diamondDarker.png')
+                        break;
+                    case -1:
+                        $('.topImg img.txt2').attr('src','img/diamondDark.png')
+                        $('.topImg img.txt3').attr('src','img/diamondDark.png')
+                        $('.next.txt2').css('opacity','1');    
+                        break;
+                    case 1:
+                        $('.topImg img.txt2').attr('src','img/diamondLight.png')
+                        $('.topImg img.txt3').attr('src','img/diamondLight.png')
+                        $('.next.txt2').css('opacity','1');
+                        break;
+                    case 3:
+                        $('.topImg img.txt2').attr('src','img/diamondLightest.png')
+                        $('.topImg img.txt3').attr('src','img/diamondLightest.png')
+                        $('.next.txt2').css('opacity','1');
+                        break;
+                
+                    default:
+                        break;
+                }
             }
         })
     }

@@ -4,9 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=1440, user-scalable=yes, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>iMLOv</title>
     <link rel="stylesheet" href="stylesheet/css/myTestSass.css"/>
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css"/>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="myScript.js"></script>
   </head>
   <body>
     <div class="outerContainer">
@@ -15,33 +18,35 @@
           <div class="user"><img src="img/userThumb.png" alt=""/>
             <p class="name">User</p>
             <p class="fColorGrey tokenYours">Your AIgatha Token:</p>
-            <p class="token">100,000</p>
+            <p class="token">100000</p>
           </div>
           <div class="introCont">
             <h1 class="intro1">About iMLOv</h1>
             <p class="intro1">We believe that everyone without professional training in informatics is able to master machine learning skills as long as the user-interface is friendly enough. By integrating several well-known machine learning algorithms into an easy-to-use interface, we present the iMLOv system. Using iMLOv can be just making several "next step" clicks. Moreover, this system accepts Excel-compatible CSV files of a simple "one row, one case" format.</p>
             <p class="intro1"> <span>Machine learning is an important technique for data classification and making predictions/decisions based on known data. It is also a key to big data analysis and artificial intelligence. In this digital era when all types of data increase explosively (proteomics, genomics, public health…), it is expectable that learning machine learning will become necessary for biologists and medical scientists in the near future. However, most machine learning software is inconvenient for users unfamiliar with programming or command-line operating. Hence, we develop this non-expert-friendly system iMLOv, which integrates decision tree, support vector machine, artificial neural network, and random forest algorithms. It also utilizes a genetic algorithm to help perform feature selections. Hopefully this system will become a useful tool for scientists to move their fields forward.</span></p>
             <h1 class="intro2">Welcome to experience AIgatha AI pridictive platform, please choose a project you interested.</h1>
-            <div class="introCol cursorPt intro2">
-              <h3>Dota2 Games Result Data Set</h3><img src="img/proj1.png" alt=""/>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
-              <p><strong>Raw data volumn : </strong>1728</p>
-              <p><strong>Number of training sets : </strong>1152</p>
-              <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
-            </div>
-            <div class="introCol cursorPt intro2">
-              <h3>Bank</h3><img src="img/proj2.png" alt=""/>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
-              <p><strong>Raw data volumn : </strong>1728</p>
-              <p><strong>Number of training sets : </strong>1152</p>
-              <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
-            </div>
-            <div class="introCol cursorPt intro2">
-              <h3>Car Evaluation Data Set</h3><img src="img/proj3.png" alt=""/>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
-              <p><strong>Raw data volumn : </strong>1728</p>
-              <p><strong>Number of training sets : </strong>1152</p>
-              <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
+            <div class="introOuter intro2">
+              <div class="introCol cursorPt intro2">
+                <h3>Dota2 Games Result Data Set</h3><img src="img/proj1.png" alt=""/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
+                <p><strong>Raw data volumn : </strong>1728</p>
+                <p><strong>Number of training sets : </strong>1152</p>
+                <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
+              </div>
+              <div class="introCol cursorPt intro2">
+                <h3>Bank</h3><img src="img/proj2.png" alt=""/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
+                <p><strong>Raw data volumn : </strong>1728</p>
+                <p><strong>Number of training sets : </strong>1152</p>
+                <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
+              </div>
+              <div class="introCol cursorPt intro2">
+                <h3>Car Evaluation Data Set</h3><img src="img/proj3.png" alt=""/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
+                <p><strong>Raw data volumn : </strong>1728</p>
+                <p><strong>Number of training sets : </strong>1152</p>
+                <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
+              </div>
             </div>
           </div>
           <div class="mainContent">
@@ -372,8 +377,8 @@
               <form class="txt2">
                 <div class="formColumn">
                   <div class="t2colInput">
-                    <input type="checkbox" name="algorithmSVM" id="supVMinputCheck"/>
-                    <label for="supVMinputCheck">Support Vector Machine</label><br/>
+                    <input class="cursorPt" type="checkbox" name="algorithmSVM" id="supVMinputCheck" value="1"/>
+                    <label class="cursorPt" for="supVMinputCheck">Support Vector Machine</label><br/>
                     <label for="supVMinputFzText">Forest size : </label>
                     <input type="text" name="forestSzSVM" id="supVMinputFzText" value="100" disabled="disabled"/><br/>
                     <label for="supVMinputCbText">Class cases balancing number : </label>
@@ -384,8 +389,8 @@
                     <label for="supVMinputRadioN">No</label>
                   </div>
                   <div class="t2colInput">
-                    <input type="checkbox" name="algorithmANN" id="artiNNinputCheck"/>
-                    <label for="artiNN">Artificial Noural Network</label><br/>
+                    <input class="cursorPt" type="checkbox" name="algorithmANN" id="artiNNinputCheck" value="1"/>
+                    <label class="cursorPt" for="artiNNinputCheck">Artificial Noural Network</label><br/>
                     <label for="artiNNinputFzText">Forest size : </label>
                     <input type="text" name="forestSzANN" id="artiNNinputFzText" value="100" disabled="disabled"/><br/>
                     <label for="artiNNinputCbText">Class cases balancing number : </label>
@@ -396,8 +401,8 @@
                     <label for="artiNNinputRadioN">No</label>
                   </div>
                   <div class="t2colInput">
-                    <input type="checkbox" name="algorithmDT" id="deciTreeinputCheck"/>
-                    <label for="deciTree">Decision Tree</label><br/>
+                    <input class="cursorPt" type="checkbox" name="algorithmDT" id="deciTreeinputCheck" value="1"/>
+                    <label class="cursorPt" for="deciTreeinputCheck">Decision Tree</label><br/>
                     <label for="deciTreeinputFzText">Forest size : </label>
                     <input type="text" name="forestSzDT" id="deciTreeinputFzText" value="100" disabled="disabled"/><br/>
                     <label for="deciTreeinputCbText">Class cases balancing number : </label>
@@ -455,24 +460,27 @@
                   <div class="progressOuter">
                     <div class="progressInner"></div>
                   </div>
-                  <div id="costTimeTxt"> <span>27.5</span> hr</div>
+                  <div id="costTimeTxt"> <span>25</span> hr</div>
                 </div>
                 <div class="cost costCoin"><img src="img/iconAIcoin.png" alt=""/>
                   <div class="progressOuter">
                     <div class="progressInner"></div>
                   </div>
-                  <div id="costCoinTxt"> <span>7000</span> ATH</div>
+                  <div id="costCoinTxt"> <span>8000</span> ATH</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="nextBtn cursorPt next intro1">Next ></div>
+          <div class="nextBtn cursorPt next intro2">Next ></div>
           <div class="nextBtn cursorPt next txt1">Next ></div>
           <div class="nextBtn cursorPt next txt2">Next ></div>
           <div class="nextBtn cursorPt next txt3">Next ></div>
           <div class="nextBtn cursorPt next txt4">Next ></div>
           <div class="nextBtn cursorPt next txt5">Next ></div>
           <div class="nextBtn cursorPt next txt6">Next ></div>
+          <div class="nextBtn cursorPt next txt6check">Next ></div>
+          <div class="nextBtn cursorPt next txt7pre">Next ></div>
           <div class="nextBtn txt7"><a href="#" title="title"><img class="share" src="img/iconShare.png" alt=""/></a></div>
         </div>
         <div class="footer">
@@ -481,7 +489,4 @@
       </div>
     </div>
   </body>
-  <script src="jquery-3.3.1.min.js"></script>
-  <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-  <script src="myScript.js"></script>
 </html>
