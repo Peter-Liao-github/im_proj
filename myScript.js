@@ -113,9 +113,9 @@ $(function() {
             
             $progressInnerNum.text(0);
             
-            $({ percent: 0}).delay(1000).animate({
+            $({ percent: 0}).delay(800).animate({
                 percent: progressInnerWidth
-            }, {duration:1500,
+            }, {duration:1200,
                 progress: function () {
                     var now2 = this.percent,
                         num = (Math.floor(now2 * 1000)/1000).toFixed(3),
@@ -215,6 +215,7 @@ $(function() {
                     $('.ani1filesRow').css('display','none');
                     $('.ani1fileSliced').css('display','none');
                     $('.txt7').css('display','');
+                    $('.txt7mask').css('display','');
                     activateChart();
                     activateChart2();
                     break;
