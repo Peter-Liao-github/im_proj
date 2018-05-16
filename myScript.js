@@ -226,6 +226,16 @@ $(function() {
         })
     }
 
+    chooseProj();
+    function chooseProj(){
+        var $choice = $('.introCol');
+        $choice.click(function () {
+            $this = $(this)
+            $choice.css({boxShadow:'unset', opacity:0.6, filter: 'grayscale(20%)', webkitFilter: 'grayscale(20%)'})
+            $this.css({boxShadow:'0px 0px 4px 4px #E3C136', opacity:1, filter: 'grayscale(0%)', webkitFilter: 'grayscale(0%)'})
+        })
+    }
+
     diamondCheckBox();
     function diamondCheckBox() {
         var $diamondCB = $('.t2colInput>input:first-child')
