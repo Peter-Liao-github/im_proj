@@ -19,8 +19,8 @@ html(lang="en")
                     .user
                         img(src="img/userThumb.png", alt="")
                         p.name User
-                        p.fColorGrey.tokenYours Your AIgatha Token:
-                        p.token 100000
+                        p.fColorGrey.tokenYours ATH: 
+                            span.token 1000
                     .introCont
                             h1.intro1 About iMLOv
                             p.intro1 We believe that everyone without professional training in informatics is able to master machine learning skills as long as the user-interface is friendly enough. By integrating several well-known machine learning algorithms into an easy-to-use interface, we present the iMLOv system. Using iMLOv can be just making several "next step" clicks. Moreover, this system accepts Excel-compatible CSV files of a simple "one row, one case" format.
@@ -366,13 +366,12 @@ html(lang="en")
                             p.txt5 Let's check it, now.
                             p.txt6 This is your task. Please select the calculation settings. You will be able to know the time and cost of the assessment.
                         .option.txt1
-                            h2 Task
                             form.txt1
-                                input(type="radio" name="task" id="Training" checked)
+                                input(type="checkbox" name="task" id="Training" checked)
                                 label(for="Training") Training
-                                input(type="radio" name="task" id="Independent test" disabled)
+                                input(type="checkbox" name="task" id="Independent test" disabled)
                                 label(for="Independent test") Independent test
-                                input(type="radio" name="task" id="Prediction" disabled)
+                                input(type="checkbox" name="task" id="Prediction" checked)
                                 label(for="Prediction") Prediction
                                 input(type="submit", value="Next >")
                         .option.txt2
@@ -432,16 +431,24 @@ html(lang="en")
                                         label(for="deciTreeinputRadioN") No
                                 input(type="submit", value="Next >") 
                         .option.txt3
-                            h2 Data
+                            h2 
                             form.txt3
                                 input(type="radio" name="data" id="excel" disabled)
                                 label(for="excel") Excel/CSV files upload
+                                br
+                                |
                                 input(type="radio" name="data" id="standard" disabled)
                                 label(for="standard") Standard iMLOv input files upload
+                                br
+                                |
                                 input(type="radio" name="data" id="template" checked)
                                 label(for="template") template project
+                                br
+                                |
                                 input(type="radio" name="data" id="previous" disabled)
                                 label(for="previous") Previous Job ID
+                                br
+                                |
                                 input(type="submit", value="Next >") 
                         .option.txt4
                             .txt5.progressOuter
@@ -459,7 +466,7 @@ html(lang="en")
                             #slider.sliderMiners
                         .hint
                             form.txt1
-                                input(type="radio" name="task" id="Testing" disabled)
+                                input(type="checkbox" name="task" id="Testing" disabled)
                                 label(for="Testing") Testing
                         .widerHint 
                             p.txt1 Select the tasks you would like to perform. Additional option will appears as you hit the checkboxes.
@@ -475,14 +482,14 @@ html(lang="en")
                                     .progressOuter
                                         .progressInner
                                     #costTimeTxt  
-                                        span 25
+                                        span 2
                                         |  hr
                                 .cost.costCoin
                                     img(src="img/iconAIcoin.png", alt="")
                                     .progressOuter
                                         .progressInner
                                     #costCoinTxt 
-                                        span 8000
+                                        span 40
                                         |  ATH
                     .nextBtn.cursorPt.next.intro1 Next >
                     .nextBtn.cursorPt.next.intro2 Next >

@@ -18,8 +18,7 @@
         <div class="innerContainer">
           <div class="user"><img src="img/userThumb.png" alt=""/>
             <p class="name">User</p>
-            <p class="fColorGrey tokenYours">Your AIgatha Token:</p>
-            <p class="token">100000</p>
+            <p class="fColorGrey tokenYours">ATH: <span class="token">1000</span></p>
           </div>
           <div class="introCont">
             <h1 class="intro1">About iMLOv</h1>
@@ -366,13 +365,12 @@
               <p class="txt6">This is your task. Please select the calculation settings. You will be able to know the time and cost of the assessment.</p>
             </div>
             <div class="option txt1">
-              <h2>Task</h2>
               <form class="txt1">
-                <input type="radio" name="task" id="Training" checked="checked"/>
+                <input type="checkbox" name="task" id="Training" checked="checked"/>
                 <label for="Training">Training</label>
-                <input type="radio" name="task" id="Independent test" disabled="disabled"/>
+                <input type="checkbox" name="task" id="Independent test" disabled="disabled"/>
                 <label for="Independent test">Independent test</label>
-                <input type="radio" name="task" id="Prediction" disabled="disabled"/>
+                <input type="checkbox" name="task" id="Prediction" checked="checked"/>
                 <label for="Prediction">Prediction</label>
                 <input type="submit" value="Next &gt;"/>
               </form>
@@ -422,16 +420,16 @@
               </form>
             </div>
             <div class="option txt3">
-              <h2>Data</h2>
+              <h2> </h2>
               <form class="txt3">
                 <input type="radio" name="data" id="excel" disabled="disabled"/>
-                <label for="excel">Excel/CSV files upload</label>
+                <label for="excel">Excel/CSV files upload</label><br/>
                 <input type="radio" name="data" id="standard" disabled="disabled"/>
-                <label for="standard">Standard iMLOv input files upload</label>
+                <label for="standard">Standard iMLOv input files upload</label><br/>
                 <input type="radio" name="data" id="template" checked="checked"/>
-                <label for="template">template project</label>
+                <label for="template">template project</label><br/>
                 <input type="radio" name="data" id="previous" disabled="disabled"/>
-                <label for="previous">Previous Job ID</label>
+                <label for="previous">Previous Job ID</label><br/>
                 <input type="submit" value="Next &gt;"/>
               </form>
             </div>
@@ -452,7 +450,7 @@
             </div>
             <div class="hint">
               <form class="txt1">
-                <input type="radio" name="task" id="Testing" disabled="disabled"/>
+                <input type="checkbox" name="task" id="Testing" disabled="disabled"/>
                 <label for="Testing">Testing</label>
               </form>
             </div>
@@ -465,13 +463,13 @@
                   <div class="progressOuter">
                     <div class="progressInner"></div>
                   </div>
-                  <div id="costTimeTxt"> <span>25</span> hr</div>
+                  <div id="costTimeTxt"> <span>2</span> hr</div>
                 </div>
                 <div class="cost costCoin"><img src="img/iconAIcoin.png" alt=""/>
                   <div class="progressOuter">
                     <div class="progressInner"></div>
                   </div>
-                  <div id="costCoinTxt"> <span>8000</span> ATH</div>
+                  <div id="costCoinTxt"> <span>40</span> ATH</div>
                 </div>
               </div>
             </div>

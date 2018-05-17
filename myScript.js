@@ -23,17 +23,17 @@ $(function() {
                 $( "#amountTask" ).val( $cofTask );
 
                 if ($cofTask<70) {
-                    progressInnerTimeWidth = $cofTask/2
+                    progressInnerTimeWidth = 2* Math.pow( 2,(70-$cofTask)/10 )
                 } else {
-                    progressInnerTimeWidth = 70/2 + ($cofTask-70)/6 
+                    progressInnerTimeWidth = 2 - ($cofTask-70)/100 
                 }
-                $( "#costTimeTxt span" ).text( Math.floor(95 - progressInnerTimeWidth)/2 - miner*10/8 );
-                $( "#costCoinTxt span" ).text( $cofTask * 100 + miner*500 );
+                $( "#costTimeTxt span" ).text( progressInnerTimeWidth );
+                $( "#costCoinTxt span" ).text( $cofTask * 1/2 + miner*5/2 );
                 $progressInnerTime.animate(
-                    {width : $( "#costTimeTxt span" ).text()/50 *100 + '%'} , 100
+                    {width : $( "#costTimeTxt span" ).text()/128 *95 + '%'} , 100
                 )
                 $progressInnerCoin.animate(
-                    {width : $( "#costCoinTxt span" ).text()/20000 *100 + '%'} , 100
+                    {width : $( "#costCoinTxt span" ).text()/75 *95 + '%'} , 100
                 )
             }
         });
@@ -47,19 +47,19 @@ $(function() {
                 $cofMiner = uiMiners.value,
                 taAliq = $( "#amountTask" ).val();
                 if (taAliq<70) {
-                    taAliqT = taAliq/2
+                    taAliqT = 2* Math.pow( 2,(70-taAliq)/10 )
                 } else {
-                    taAliqT = 70/2 + (taAliq-70)/6 
+                    taAliqT = 2 - (taAliq-70)/100 
                 }
 
                 $( "#amountMiner" ).val( $cofMiner );
-                $( "#costTimeTxt span" ).text( Math.floor(95 - taAliqT)/2 - $cofMiner*10/8 );
-                $( "#costCoinTxt span" ).text( taAliq * 100 + $cofMiner*500 );
+                $( "#costTimeTxt span" ).text( taAliqT );
+                $( "#costCoinTxt span" ).text( taAliq * 1/2 + $cofMiner*5/2 );
                 $progressInnerTime.animate(
-                    {width : $( "#costTimeTxt span" ).text()/50 *100 + '%'} , 100
+                    {width : $( "#costTimeTxt span" ).text()/128 *95 + '%'} , 100
                 )
                 $progressInnerCoin.animate(
-                    {width : $( "#costCoinTxt span" ).text()/20000 *100 + '%'} , 100
+                    {width : $( "#costCoinTxt span" ).text()/75 *95 + '%'} , 100
                 )
             }
         });
