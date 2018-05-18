@@ -19,6 +19,7 @@
           <div class="user"><img src="img/userThumb.png" alt=""/>
             <p class="name">User</p>
             <p class="fColorGrey tokenYours">ATH: <span class="token">1000</span></p>
+            <div class="txt7"><a href="#" title="title"><img class="share" src="img/iconShare.png" alt=""/></a></div>
           </div>
           <div class="introCont">
             <h1 class="intro1">About iMLOv</h1>
@@ -46,6 +47,37 @@
                 <p><strong>Raw data volumn : </strong>1728</p>
                 <p><strong>Number of training sets : </strong>1152</p>
                 <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
+              </div>
+            </div>
+            <div class="setOfTaskPage">
+              <h1 class="setOfTask">Setting of the Task</h1>
+              <hr/>
+              <div class="infoTrainingData">
+                <h3 class="setOfTask">Information of your training data</h3>
+                <p>Number of cases: 63</p>
+                <p>Number of features: 6</p>
+              </div>
+              <hr/>
+              <h3 class="setOfTask">Testing</h3>
+              <div class="formColumn">
+                <div class="t2colInput">
+                  <input class="cursorPt" type="radio" name="settingOfTest" id="nFold" checked="checked"/>
+                  <label class="cursorPt" for="nFold">N-fold cross validation</label>
+                  <div class="nFoldDetail">
+                    <label for="numFold">Number of folds (n) = </label>
+                    <input type="text" name="settingOfTestNumOfFold" id="numFold" value="3" disabled="disabled"/><br/>Groping method : 
+                    <input type="radio" name="gropMethod" id="gropMethodI" checked="checked" disabled="disabled"/>
+                    <label for="gropMethodI">Interval</label>
+                    <input type="radio" name="gropMethod" id="gropMethodR" disabled="disabled"/>
+                    <label for="gropMethodR">Random</label>
+                    <input type="radio" name="gropMethod" id="gropMethodS" disabled="disabled"/>
+                    <label for="gropMethodS">Serial</label>
+                  </div>
+                  <input class="cursorPt" type="radio" name="settingOfTest" id="leaveOne" disabled="disabled"/>
+                  <label class="cursorPt" for="leaveOne">Leave one out (jack knife)</label><br/>
+                  <input class="cursorPt" type="radio" name="settingOfTest" id="selfT" disabled="disabled"/>
+                  <label class="cursorPt" for="selfT">Self-test (using the whole training data set for testing)</label>
+                </div>
               </div>
             </div>
           </div>
@@ -109,14 +141,16 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">3.82</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
-                    <div class="circleMaskOuter left">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                    <div class="circleContainer">
+                      <div class="circleMaskOuter left">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="circleMaskOuter right">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                      <div class="circleMaskOuter right">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -171,14 +205,16 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">5.42</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
-                    <div class="circleMaskOuter left">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                    <div class="circleContainer">
+                      <div class="circleMaskOuter left">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="circleMaskOuter right">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                      <div class="circleMaskOuter right">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -233,14 +269,16 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">4.38</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
-                    <div class="circleMaskOuter left">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                    <div class="circleContainer">
+                      <div class="circleMaskOuter left">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="circleMaskOuter right">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                      <div class="circleMaskOuter right">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -295,14 +333,16 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">1.42</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
-                    <div class="circleMaskOuter left">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                    <div class="circleContainer">
+                      <div class="circleMaskOuter left">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="circleMaskOuter right">
-                      <div class="circleMaskInner">
-                        <div class="circleBody"></div>
+                      <div class="circleMaskOuter right">
+                        <div class="circleMaskInner">
+                          <div class="circleBody"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -474,17 +514,28 @@
               </div>
             </div>
           </div>
-          <div class="nextBtn cursorPt next intro1">Next ></div>
-          <div class="nextBtn cursorPt next intro2">Next ></div>
-          <div class="nextBtn cursorPt next txt1">Next ></div>
-          <div class="nextBtn cursorPt next txt2">Next ></div>
-          <div class="nextBtn cursorPt next txt3">Next ></div>
-          <div class="nextBtn cursorPt next txt4">Next ></div>
-          <div class="nextBtn cursorPt next txt5">Next ></div>
-          <div class="nextBtn cursorPt next txt6">Next ></div>
-          <div class="nextBtn cursorPt next txt6check">Next ></div>
-          <div class="nextBtn cursorPt next txt7pre">Next ></div>
-          <div class="nextBtn txt7"><a href="#" title="title"><img class="share" src="img/iconShare.png" alt=""/></a></div>
+          <div class="nextBtn cursorPt next intro1"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next intro2"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last intro2"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt1"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt1"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next setOfTaskPage"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last setOfTaskPage"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt2"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt2"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt3"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt3"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt4"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt4"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt5"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt5"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt6"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt6"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt6check"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt6check"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt next txt7pre"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt7pre"> <img src="img/arrowPre.png" alt=""/></div>
+          <div class="nextBtn cursorPt last txt7"> <img src="img/arrowPre.png" alt=""/></div>
         </div>
         <div class="footer">
           <div class="footerInner fColorGrey">The intergrated Machine Learning and Optimization Server<img src="img/logoCorner.png" alt=""/></div>

@@ -9,8 +9,8 @@ $(function() {
             progressInnerTimeWidth,
             progressInnerCoinWidth;
         
-            $progressInnerTime = $costTime.find('.progressInner').css({width: '50%'});
-            $progressInnerCoin = $costCoin.find('.progressInner').css({width: '40%'});
+            $progressInnerTime = $costTime.find('.progressInner').css({width: 2/128 *96.5 +'%'});
+            $progressInnerCoin = $costCoin.find('.progressInner').css({width: 40/75 *96.5 +'%'});
         $( ".sliderTask" ).slider({
             value:70,
             min: 10,
@@ -30,10 +30,10 @@ $(function() {
                 $( "#costTimeTxt span" ).text( progressInnerTimeWidth );
                 $( "#costCoinTxt span" ).text( $cofTask * 1/2 + miner*5/2 );
                 $progressInnerTime.animate(
-                    {width : $( "#costTimeTxt span" ).text()/128 *95 + '%'} , 100
+                    {width : $( "#costTimeTxt span" ).text()/128 *96.5 + '%'} , 100
                 )
                 $progressInnerCoin.animate(
-                    {width : $( "#costCoinTxt span" ).text()/75 *95 + '%'} , 100
+                    {width : $( "#costCoinTxt span" ).text()/75 *96.5 + '%'} , 100
                 )
             }
         });
@@ -99,6 +99,7 @@ $(function() {
                 }
             });
         });
+
     }
     
     function activateChart2() {
@@ -137,8 +138,9 @@ $(function() {
 
     nextButton();
     function nextButton() {
-        var allPageClass = ['intro1','intro2','txt1','txt2','txt3','p.txt4','txt4','txt5','txt6','txt6check','txt7pre','txt7','txt7mask'],
+        var allPageClass = ['intro1','intro2','txt1','setOfTaskPage','txt2','txt3','p.txt4','txt4','txt5','txt6','txt6check','txt7pre','txt7','txt7mask'],
             $next = $('.next');
+            $last = $('.last');
 
         for (let index = 1; index < allPageClass.length; index++) {
             const element = allPageClass[index];
@@ -160,6 +162,11 @@ $(function() {
             
                 case 'txt1':
                     $('.txt1').css('display','none');
+                    $('.setOfTaskPage').css('display','');
+                    break;
+                    
+                case 'setOfTaskPage':
+                    $('.setOfTaskPage').css('display','none');
                     $('.txt2').css('display','');
                     break;
                     
@@ -176,7 +183,8 @@ $(function() {
                 case 'txt4':
                     $('p.txt4').css('display','none');
                     $('.txt5').css('display','');
-                    $('.next.txt4').css('display','none');
+                    $('.nextBtn.txt4').css('display','none');
+                    $('.ani1fileSingle').css('display','none');
                     $('.ani2miners').css('display','none');
                     $('.ani2file').css('display','none');
                     $('.ani2filesCheckSingle').css('display','none');
@@ -191,7 +199,7 @@ $(function() {
             
                 case 'txt6':
                     $('.txt6').css('display','none');
-                    $('p.token').text( 100000 - $( "#costCoinTxt span" ).text() );
+                    $('span.token').text( 1000 - $( "#costCoinTxt span" ).text() );
                     $('.txt6check').css('display','');
                     break;
 
@@ -224,6 +232,90 @@ $(function() {
                     break;
             }
         })
+
+        $last.click(function (){
+        var nowPage = $(this).attr('class').substr(22)
+            switch (nowPage) {
+                case 'intro2':
+                    $('.intro2').css('display','none');
+                    $('.intro1').css('display','');
+                break;
+                
+                case 'txt1':
+                    $('.txt1').css('display','none');
+                    $('.intro2').css('display','');
+                break;
+                
+                case 'setOfTaskPage':
+                    $('.setOfTaskPage').css('display','none');
+                    $('.txt1').css('display','');
+                break;
+                
+                case 'txt2':
+                    $('.txt2').css('display','none');
+                    $('.setOfTaskPage').css('display','');
+                break;
+                
+                case 'txt3':
+                    $('.txt3').css('display','none');
+                    $('.txt2').css('display','');
+                break;
+                
+                case 'txt4':
+                    $('.txt4').css('display','none');
+                    $('.txt3').css('display','');
+                break;
+                
+                case 'txt5':
+                    $('p.txt4').css('display','');
+                    $('.txt5').css('display','none');
+                    $('.nextBtn.txt4').css('display','');
+                    $('.option.txt4>img').css('opacity','1');
+                    $('.ani1fileSingle').css('display','');
+                    break;
+                    
+                case 'txt6':
+                    $('.txt4').css('display','');
+                    $('p.txt4').css('display','none');
+                    $('.txt5').css('display','');
+                    $('.ani2file').css('display','none');
+                    $('.ani2filesCheckSingle').css('display','none');
+                    $('.txt6').css('display','none');
+                break;
+                
+                case 'txt6check':
+                    $('.txt6').css('display','');
+                    $('span.token').text( 1000 );
+                    $('.txt6check').css('display','none');
+                    break;
+                    
+                case 'txt7pre':
+                    $('.txt6check').css('display','');
+                    $('.ani2miners').css('display','none');
+                    $('.ani2file').css('display','none');
+                    $('.ani2filesCheckSingle').css('display','none');
+                    $('.ani1fortress').css('display','none');
+                    $('.ani1filesRow').css({animation: 'pureFIn 1.5s 0.5s 1 both' ,display:'none'});
+                    $('.ani1fileSliced').css({animation: 'ani1fileSlicedFIn 3s 0.5s 1 both' ,display:'none'});
+                    $('.txt7pre').css('display','none');
+                break;
+                    
+                case 'txt7':
+                    $('.txt7pre').css('display','');
+                    $('.ani2miners').css('display','');
+                    $('.ani2file').css('display','');
+                    $('.ani2filesCheckSingle').css('display','');
+                    $('.ani1fortress').css('display','');
+                    $('.ani1filesRow').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
+                    $('.ani1fileSliced').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
+                    $('.txt7').css('display','none');
+                    $('.txt7mask').css('display','none');
+                break;    
+
+                default:
+                    break;
+            }
+        })
     }
 
     chooseProj();
@@ -248,13 +340,13 @@ $(function() {
                 if ($this.prop('checked')) {
                     sum += parseInt(($this.val()));
                     diamondBrighten(sum);
-                    $('.colTxt6Check.'+uncheckedClass).css({opacity:1,textDecoration:'none'});
-                    $('p.'+uncheckedClass).css({opacity:1,textDecoration:'none'});
+                    $('.colTxt6Check.'+uncheckedClass).css({display: ''});
+                    $('p.'+uncheckedClass).css({display: ''});
                 } else if (!$this.prop('checked')){
                     sum -= $this.val();
                     diamondBrighten(sum);
-                    $('.colTxt6Check.'+uncheckedClass).css({opacity:0.4,textDecoration:'line-through'});
-                    $('p.'+uncheckedClass).css({opacity:0.4,textDecoration:'line-through'});
+                    $('.colTxt6Check.'+uncheckedClass).css({display: 'none'});
+                    $('p.'+uncheckedClass).css({display: 'none'});
                 }
             })
             
@@ -263,6 +355,7 @@ $(function() {
                     case -3:
                         $('.topImg img.txt2').attr('src','img/diamondDarker.png')
                         $('.topImg img.txt3').attr('src','img/diamondDarker.png')
+                        $('.next.txt2').css('opacity','0');
                         break;
                     case -1:
                         $('.topImg img.txt2').attr('src','img/diamondDark.png')

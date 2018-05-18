@@ -21,6 +21,9 @@ html(lang="en")
                         p.name User
                         p.fColorGrey.tokenYours ATH: 
                             span.token 1000
+                        .txt7
+                            a(href="#", title="title")
+                                img(src="img/iconShare.png", alt="").share 
                     .introCont
                             h1.intro1 About iMLOv
                             p.intro1 We believe that everyone without professional training in informatics is able to master machine learning skills as long as the user-interface is friendly enough. By integrating several well-known machine learning algorithms into an easy-to-use interface, we present the iMLOv system. Using iMLOv can be just making several "next step" clicks. Moreover, this system accepts Excel-compatible CSV files of a simple "one row, one case" format.
@@ -67,6 +70,39 @@ html(lang="en")
                                     .introIcon
                                         img(src="img/iconQMark.png", alt="").cursorPt
                                         img(src="img/iconDown.png", alt="").cursorPt
+                            .setOfTaskPage
+                                h1.setOfTask Setting of the Task
+                                hr
+                                |
+                                .infoTrainingData
+                                    h3.setOfTask Information of your training data
+                                    p Number of cases: 63
+                                    p Number of features: 6
+                                hr
+                                |
+                                h3.setOfTask Testing
+                                .formColumn
+                                    .t2colInput
+                                        input.cursorPt(type="radio" name="settingOfTest" id="nFold" checked)
+                                        label.cursorPt(for="nFold") N-fold cross validation
+                                        .nFoldDetail
+                                            label(for="numFold") Number of folds (n) = 
+                                            input(type="text" name="settingOfTestNumOfFold" id="numFold" value="3" disabled)
+                                            br
+                                            |Groping method : 
+                                            input(type="radio" name="gropMethod" id="gropMethodI" checked disabled)
+                                            label(for="gropMethodI") Interval
+                                            input(type="radio" name="gropMethod" id="gropMethodR" disabled)
+                                            label(for="gropMethodR") Random
+                                            input(type="radio" name="gropMethod" id="gropMethodS" disabled)
+                                            label(for="gropMethodS") Serial
+                                        input.cursorPt(type="radio" name="settingOfTest" id="leaveOne" disabled)
+                                        label.cursorPt(for="leaveOne") Leave one out (jack knife)
+                                        br
+                                        |
+                                        input.cursorPt(type="radio" name="settingOfTest" id="selfT" disabled)
+                                        label.cursorPt(for="selfT") Self-test (using the whole training data set for testing)
+
                     .mainContent
                         .topImg
                             img.txt1(src="img/diamondDarkest.png", alt="")
@@ -175,12 +211,13 @@ html(lang="en")
                                             span.percentNumError 3.82
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
-                                        .circleMaskOuter.left
-                                            .circleMaskInner
-                                                .circleBody
-                                        .circleMaskOuter.right
-                                            .circleMaskInner
-                                                .circleBody
+                                        .circleContainer
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
                                     .chartProgress
                                         .chartProgItem
                                             h4 AUC
@@ -223,12 +260,13 @@ html(lang="en")
                                             span.percentNumError 5.42
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
-                                        .circleMaskOuter.left
-                                            .circleMaskInner
-                                                .circleBody
-                                        .circleMaskOuter.right
-                                            .circleMaskInner
-                                                .circleBody
+                                        .circleContainer
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
                                     .chartProgress
                                         .chartProgItem
                                             h4 AUC
@@ -271,12 +309,13 @@ html(lang="en")
                                             span.percentNumError 4.38
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
-                                        .circleMaskOuter.left
-                                            .circleMaskInner
-                                                .circleBody
-                                        .circleMaskOuter.right
-                                            .circleMaskInner
-                                                .circleBody
+                                        .circleContainer
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
                                     .chartProgress
                                         .chartProgItem
                                             h4 AUC
@@ -319,12 +358,13 @@ html(lang="en")
                                             span.percentNumError 1.42
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
-                                        .circleMaskOuter.left
-                                            .circleMaskInner
-                                                .circleBody
-                                        .circleMaskOuter.right
-                                            .circleMaskInner
-                                                .circleBody
+                                        .circleContainer
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
                                     .chartProgress
                                         .chartProgItem
                                             h4 AUC
@@ -491,19 +531,51 @@ html(lang="en")
                                     #costCoinTxt 
                                         span 40
                                         |  ATH
-                    .nextBtn.cursorPt.next.intro1 Next >
-                    .nextBtn.cursorPt.next.intro2 Next >
-                    .nextBtn.cursorPt.next.txt1 Next >
-                    .nextBtn.cursorPt.next.txt2 Next >
-                    .nextBtn.cursorPt.next.txt3 Next >
-                    .nextBtn.cursorPt.next.txt4 Next >
-                    .nextBtn.cursorPt.next.txt5 Next >
-                    .nextBtn.cursorPt.next.txt6 Next >
-                    .nextBtn.cursorPt.next.txt6check Next >
-                    .nextBtn.cursorPt.next.txt7pre Next >
-                    .nextBtn.txt7
-                        a(href="#", title="title")
-                            img(src="img/iconShare.png", alt="").share 
+                    .nextBtn.cursorPt.next.intro1 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.intro2 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.intro2 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt1 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt1 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.setOfTaskPage 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.setOfTaskPage 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt2 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt2 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt3 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt3 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt4 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt4 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt5 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt5 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt6 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt6 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt6check 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt6check 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.next.txt7pre 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt7pre 
+                        img(src="img/arrowPre.png", alt="")
+                    .nextBtn.cursorPt.last.txt7 
+                        img(src="img/arrowPre.png", alt="")
+                    
                 .footer
                     .footerInner.fColorGrey The intergrated Machine Learning and Optimization Server
                         img(src="img/logoCorner.png", alt="")
