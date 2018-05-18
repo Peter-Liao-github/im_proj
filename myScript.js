@@ -328,6 +328,36 @@ $(function() {
         })
     }
 
+    changeBgi();
+    function changeBgi() {
+        $('.toggleRound').click(function () {
+            if ($(this).hasClass('toggleBgi')) {
+                $(this).css('background','#eee')
+                $('.outerContainer>.bgi>img').attr('src','img/bgi2.png');
+                $('.introCont').css('color','#fff')
+                $('.mainContent').css('color','#fff')
+                $('.fColorGrey').addClass('fColorWhite')
+                $('img[src="img/diamondDarkest.png"]').attr('src','img/diamondDarkestB.png')
+                $('img[src="img/diamondDark.png"]').attr('src','img/diamondDarkB.png')
+                $('img[src="img/diamondLight.png"]').attr('src','img/diamondLightB.png')
+                $('img[src="img/diamondLightest.png"]').attr('src','img/diamondLightestB.png')
+                $('.txt7mask').css('opacity',0)
+                $(this).removeClass('toggleBgi');
+            } else {
+                $(this).css('background','linear-gradient(#E3C136 5%,#898989 25%,#898989 60%,#E3C136)'),
+                $('.outerContainer>.bgi>img').attr('src','img/bgi1.png');
+                $('.introCont').css('color','#898989')
+                $('.mainContent').css('color','#898989')
+                $('img[src="img/diamondDarkestB.png"]').attr('src','img/diamondDarkest.png')
+                $('img[src="img/diamondDarkB.png"]').attr('src','img/diamondDark.png')
+                $('img[src="img/diamondLightB.png"]').attr('src','img/diamondLight.png')
+                $('img[src="img/diamondLightestB.png"]').attr('src','img/diamondLightest.png')
+                $(this).addClass('toggleBgi');
+                $('.fColorGrey').removeClass('fColorWhite')
+            }
+        })
+    }
+
     diamondCheckBox();
     function diamondCheckBox() {
         var $diamondCB = $('.t2colInput>input:first-child')
@@ -351,30 +381,58 @@ $(function() {
             })
             
             function diamondBrighten(sum){
-                switch (sum) {
-                    case -3:
-                        $('.topImg img.txt2').attr('src','img/diamondDarker.png')
-                        $('.topImg img.txt3').attr('src','img/diamondDarker.png')
-                        $('.next.txt2').css('opacity','0');
-                        break;
-                    case -1:
-                        $('.topImg img.txt2').attr('src','img/diamondDark.png')
-                        $('.topImg img.txt3').attr('src','img/diamondDark.png')
-                        $('.next.txt2').css('opacity','1');    
-                        break;
-                    case 1:
-                        $('.topImg img.txt2').attr('src','img/diamondLight.png')
-                        $('.topImg img.txt3').attr('src','img/diamondLight.png')
-                        $('.next.txt2').css('opacity','1');
-                        break;
-                    case 3:
-                        $('.topImg img.txt2').attr('src','img/diamondLightest.png')
-                        $('.topImg img.txt3').attr('src','img/diamondLightest.png')
-                        $('.next.txt2').css('opacity','1');
-                        break;
-                
-                    default:
-                        break;
+                if ($('.toggleRound').hasClass('toggleBgi')) {
+                    switch (sum) {
+                        case -3:
+                            $('.topImg img.txt2').attr('src','img/diamondDarkest.png')
+                            $('.topImg img.txt3').attr('src','img/diamondDarkest.png')
+                            $('.next.txt2').css('opacity','0');
+                            break;
+                        case -1:
+                            $('.topImg img.txt2').attr('src','img/diamondDark.png')
+                            $('.topImg img.txt3').attr('src','img/diamondDark.png')
+                            $('.next.txt2').css('opacity','1');    
+                            break;
+                        case 1:
+                            $('.topImg img.txt2').attr('src','img/diamondLight.png')
+                            $('.topImg img.txt3').attr('src','img/diamondLight.png')
+                            $('.next.txt2').css('opacity','1');
+                            break;
+                        case 3:
+                            $('.topImg img.txt2').attr('src','img/diamondLightest.png')
+                            $('.topImg img.txt3').attr('src','img/diamondLightest.png')
+                            $('.next.txt2').css('opacity','1');
+                            break;
+                    
+                        default:
+                            break;
+                    }
+                } else {
+                    switch (sum) {
+                        case -3:
+                            $('.topImg img.txt2').attr('src','img/diamondDarkestB.png')
+                            $('.topImg img.txt3').attr('src','img/diamondDarkestB.png')
+                            $('.next.txt2').css('opacity','0');
+                            break;
+                        case -1:
+                            $('.topImg img.txt2').attr('src','img/diamondDarkB.png')
+                            $('.topImg img.txt3').attr('src','img/diamondDarkB.png')
+                            $('.next.txt2').css('opacity','1');    
+                            break;
+                        case 1:
+                            $('.topImg img.txt2').attr('src','img/diamondLightB.png')
+                            $('.topImg img.txt3').attr('src','img/diamondLightB.png')
+                            $('.next.txt2').css('opacity','1');
+                            break;
+                        case 3:
+                            $('.topImg img.txt2').attr('src','img/diamondLightestB.png')
+                            $('.topImg img.txt3').attr('src','img/diamondLightestB.png')
+                            $('.next.txt2').css('opacity','1');
+                            break;
+                    
+                        default:
+                            break;
+                    }
                 }
             }
         })
