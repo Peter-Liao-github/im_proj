@@ -10,7 +10,7 @@ $(function() {
             progressInnerCoinWidth;
         
             $progressInnerTime = $costTime.find('.progressInner').css({width: 2/128 *96.5 +'%'});
-            $progressInnerCoin = $costCoin.find('.progressInner').css({width: 40/75 *96.5 +'%'});
+            $progressInnerCoin = $costCoin.find('.progressInner').css({width: 70/500 *96.5 +'%'});
         $( ".sliderTask" ).slider({
             value:70,
             min: 10,
@@ -28,12 +28,12 @@ $(function() {
                     progressInnerTimeWidth = 2 - ($cofTask-70)/100 
                 }
                 $( "#costTimeTxt span" ).text( progressInnerTimeWidth );
-                $( "#costCoinTxt span" ).text( $cofTask * 1/2 + miner*5/2 );
+                $( "#costCoinTxt span" ).text( $cofTask * miner/2 );
                 $progressInnerTime.animate(
                     {width : $( "#costTimeTxt span" ).text()/128 *96.5 + '%'} , 100
                 )
                 $progressInnerCoin.animate(
-                    {width : $( "#costCoinTxt span" ).text()/75 *96.5 + '%'} , 100
+                    {width : $( "#costCoinTxt span" ).text()/500 *96.5 + '%'} , 100
                 )
             }
         });
@@ -54,12 +54,12 @@ $(function() {
 
                 $( "#amountMiner" ).val( $cofMiner );
                 $( "#costTimeTxt span" ).text( taAliqT );
-                $( "#costCoinTxt span" ).text( taAliq * 1/2 + $cofMiner*5/2 );
+                $( "#costCoinTxt span" ).text( taAliq * $cofMiner/2 );
                 $progressInnerTime.animate(
                     {width : $( "#costTimeTxt span" ).text()/128 *95 + '%'} , 100
                 )
                 $progressInnerCoin.animate(
-                    {width : $( "#costCoinTxt span" ).text()/75 *95 + '%'} , 100
+                    {width : $( "#costCoinTxt span" ).text()/500 *95 + '%'} , 100
                 )
             }
         });
