@@ -2,7 +2,8 @@ $(function() {
     
     activeCost();
     function activeCost(){
-        var $costTime = $('.costTime'),
+        var $returnTime = $('.topImg .txt6 p:nth-of-type(2)'),
+            $costTime = $('.costTime'),
             $costCoin = $('.costCoin'),
             $cofTask,
             $cofMiner,
@@ -28,6 +29,7 @@ $(function() {
                     progressInnerTimeWidth = 2 - ($cofTask-70)/100 
                 }
                 $( "#costTimeTxt span" ).text( progressInnerTimeWidth );
+                $returnTime.text( progressInnerTimeWidth +' hr' );
                 $( "#costCoinTxt span" ).text( $cofTask * miner/2 );
                 $progressInnerTime.animate(
                     {width : $( "#costTimeTxt span" ).text()/128 *96.5 + '%'} , 100
@@ -54,6 +56,7 @@ $(function() {
 
                 $( "#amountMiner" ).val( $cofMiner );
                 $( "#costTimeTxt span" ).text( taAliqT );
+                $returnTime.text( taAliqT +' hr' );
                 $( "#costCoinTxt span" ).text( taAliq * $cofMiner/2 );
                 $progressInnerTime.animate(
                     {width : $( "#costTimeTxt span" ).text()/128 *95 + '%'} , 100
@@ -436,5 +439,16 @@ $(function() {
                 }
             }
         })
+    }
+
+    downArrowHover();
+    function downArrowHover(){
+        var $imgDown = $('.chart img');
+        $imgDown.hover(function(){
+            var $this = $(this);
+            $(this).next().css("display", "block");
+            }, function(){
+            $(this).next().css("display", "none");
+        });
     }
 } );

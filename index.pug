@@ -123,15 +123,18 @@ html(lang="en")
                                 h3 Job ID : 
                                 p J3112214
                                 h3 Return time : 
-                                p 03 : 30 : 56
+                                p 2 hr
                                 h3 Job capacity : 
                                 p 10g
                             .txt6check
                                 .colTxt6Check
                                     h2 Data
                                     h3 
-                                        span Features file
+                                        span Training file
                                         | TBG.csv
+                                    h3 
+                                        span Prediction file
+                                        | TBG_pred.csv    
                                     h3
                                         span Case files
                                         | Null
@@ -211,6 +214,8 @@ html(lang="en")
                                             span.percentNumError 3.82
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
+                                        .chartMention
+                                            p click download model and prediction
                                         .circleContainer
                                             .circleMaskOuter.left
                                                 .circleMaskInner
@@ -260,6 +265,8 @@ html(lang="en")
                                             span.percentNumError 5.42
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
+                                        .chartMention
+                                            p click download model and prediction
                                         .circleContainer
                                             .circleMaskOuter.left
                                                 .circleMaskInner
@@ -309,6 +316,8 @@ html(lang="en")
                                             span.percentNumError 4.38
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
+                                        .chartMention
+                                            p click download model and prediction
                                         .circleContainer
                                             .circleMaskOuter.left
                                                 .circleMaskInner
@@ -358,6 +367,8 @@ html(lang="en")
                                             span.percentNumError 1.42
                                             span.percentSym %
                                         img.cursorPt(src="img/iconDown.png", alt="")
+                                        .chartMention
+                                            p click download model and prediction
                                         .circleContainer
                                             .circleMaskOuter.left
                                                 .circleMaskInner
@@ -407,13 +418,13 @@ html(lang="en")
                             p.txt6 This is your task. Please select the calculation settings. You will be able to know the time and cost of the assessment.
                         .option.txt1
                             form.txt1
-                                input(type="checkbox" name="task" id="Training" checked)
-                                label(for="Training") Training
-                                input(type="checkbox" name="task" id="Independent test" disabled)
-                                label(for="Independent test") Independent test
-                                input(type="checkbox" name="task" id="Prediction" checked)
-                                label(for="Prediction") Prediction
-                                input(type="submit", value="Next >")
+                                input.cursorPt(type="checkbox" name="task" id="Training" checked)
+                                label.cursorPt(for="Training") Training
+                                input.cursorPt(type="checkbox" name="task" id="Independent test" disabled)
+                                label.cursorPt(for="Independent test") Independent test
+                                input.cursorPt(type="checkbox" name="task" id="Prediction" checked)
+                                label.cursorPt(for="Prediction") Prediction
+                                input.cursorPt(type="submit", value="Next >")
                         .option.txt2
                             h2 Algorithms
                             form.txt2
@@ -497,13 +508,15 @@ html(lang="en")
                             img.ani1fileSingle(src="img/ani1fileSingle.png", alt="")
                         .option.txt6
                             h3
-                            label(for="amountTask") Task aliquots:
+                            label(for="amountTask") Task:
                             input#amountTask(type="text", name="amountTask")
                             #slider.sliderTask
+                                .sliderMiddleLine
                             h3
                             label(for="amountMiner") Miners:
                             input#amountMiner(type="text", name="amountMiner")
                             #slider.sliderMiners
+                                .sliderMiddleLine
                         .hint
                             form.txt1
                                 input(type="checkbox" name="task" id="Testing" disabled)

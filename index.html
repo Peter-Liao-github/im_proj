@@ -87,14 +87,15 @@
                 <h3>Job ID : </h3>
                 <p>J3112214</p>
                 <h3>Return time : </h3>
-                <p>03 : 30 : 56</p>
+                <p>2 hr</p>
                 <h3>Job capacity : </h3>
                 <p>10g</p>
               </div>
               <div class="txt6check">
                 <div class="colTxt6Check">
                   <h2>Data</h2>
-                  <h3> <span>Features file</span>TBG.csv</h3>
+                  <h3> <span>Training file</span>TBG.csv</h3>
+                  <h3> <span>Prediction file</span>TBG_pred.csv    </h3>
                   <h3><span>Case files</span>Null</h3>
                   <h3><span>Model file</span>Null </h3>
                 </div>
@@ -141,6 +142,9 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">3.82</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <div class="chartMention">
+                      <p>click download model and prediction</p>
+                    </div>
                     <div class="circleContainer">
                       <div class="circleMaskOuter left">
                         <div class="circleMaskInner">
@@ -205,6 +209,9 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">5.42</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <div class="chartMention">
+                      <p>click download model and prediction</p>
+                    </div>
                     <div class="circleContainer">
                       <div class="circleMaskOuter left">
                         <div class="circleMaskInner">
@@ -269,6 +276,9 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">4.38</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <div class="chartMention">
+                      <p>click download model and prediction</p>
+                    </div>
                     <div class="circleContainer">
                       <div class="circleMaskOuter left">
                         <div class="circleMaskInner">
@@ -333,6 +343,9 @@
                     <p>Number of cases : 165.67</p>
                     <p>Correct rate : <span class="percentNum">1.42</span><span class="percentSym">%</span></p>
                     <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><img class="cursorPt" src="img/iconDown.png" alt=""/>
+                    <div class="chartMention">
+                      <p>click download model and prediction</p>
+                    </div>
                     <div class="circleContainer">
                       <div class="circleMaskOuter left">
                         <div class="circleMaskInner">
@@ -406,13 +419,13 @@
             </div>
             <div class="option txt1">
               <form class="txt1">
-                <input type="checkbox" name="task" id="Training" checked="checked"/>
-                <label for="Training">Training</label>
-                <input type="checkbox" name="task" id="Independent test" disabled="disabled"/>
-                <label for="Independent test">Independent test</label>
-                <input type="checkbox" name="task" id="Prediction" checked="checked"/>
-                <label for="Prediction">Prediction</label>
-                <input type="submit" value="Next &gt;"/>
+                <input class="cursorPt" type="checkbox" name="task" id="Training" checked="checked"/>
+                <label class="cursorPt" for="Training">Training</label>
+                <input class="cursorPt" type="checkbox" name="task" id="Independent test" disabled="disabled"/>
+                <label class="cursorPt" for="Independent test">Independent test</label>
+                <input class="cursorPt" type="checkbox" name="task" id="Prediction" checked="checked"/>
+                <label class="cursorPt" for="Prediction">Prediction</label>
+                <input class="cursorPt" type="submit" value="Next &gt;"/>
               </form>
             </div>
             <div class="option txt2">
@@ -480,13 +493,17 @@
             </div>
             <div class="option txt6">
               <h3></h3>
-              <label for="amountTask">Task aliquots:</label>
+              <label for="amountTask">Task:</label>
               <input id="amountTask" type="text" name="amountTask"/>
-              <div class="sliderTask" id="slider"></div>
+              <div class="sliderTask" id="slider">
+                <div class="sliderMiddleLine"></div>
+              </div>
               <h3></h3>
               <label for="amountMiner">Miners:</label>
               <input id="amountMiner" type="text" name="amountMiner"/>
-              <div class="sliderMiners" id="slider"></div>
+              <div class="sliderMiners" id="slider">
+                <div class="sliderMiddleLine"></div>
+              </div>
             </div>
             <div class="hint">
               <form class="txt1">
