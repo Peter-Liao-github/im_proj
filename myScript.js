@@ -205,8 +205,8 @@ $(function() {
                     $('span.token').text( 1000 - $( "#costCoinTxt span" ).text() );
                     $('.txt6check').css('display','');
                     break;
-
-                case 'txt6check':
+                    
+                    case 'txt6check':
                     $('.txt6check').css('display','none');
                     $('.ani2miners').css('display','');
                     $('.ani2file').css('display','');
@@ -215,9 +215,11 @@ $(function() {
                     $('.ani1filesRow').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
                     $('.ani1fileSliced').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
                     $('.txt7pre').css('display','');
+                    $('.option.txt4').css('display','');
+                    $('.ani1monitor').css({animation: 'pureFIn 1s 9s 1 both' ,display:''});
                     break;
-            
-                case 'txt7pre':
+                    
+                    case 'txt7pre':
                     $('.txt7pre').css('display','none');
                     $('.ani2miners').css('display','none');
                     $('.ani2file').css('display','none');
@@ -227,6 +229,7 @@ $(function() {
                     $('.ani1fileSliced').css('display','none');
                     $('.txt7').css('display','');
                     $('.txt7mask').css('display','');
+                    $('.option.txt4').css('display','none');
                     activateChart();
                     activateChart2();
                     break;
@@ -301,6 +304,7 @@ $(function() {
                     $('.ani1filesRow').css({animation: 'pureFIn 1.5s 0.5s 1 both' ,display:'none'});
                     $('.ani1fileSliced').css({animation: 'ani1fileSlicedFIn 3s 0.5s 1 both' ,display:'none'});
                     $('.txt7pre').css('display','none');
+                    $('.option.txt4').css('display','none');
                 break;
                     
                 case 'txt7':
@@ -313,6 +317,8 @@ $(function() {
                     $('.ani1fileSliced').css({animation: 'fOutToDown 2s 0.5s 1 both' ,display:''});
                     $('.txt7').css('display','none');
                     $('.txt7mask').css('display','none');
+                    $('.option.txt4').css('display','');
+                    $('.ani1monitor').css({animation: 'pureFIn 1s 9s 1 both' ,display:''});
                 break;    
 
                 default:
