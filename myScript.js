@@ -157,8 +157,17 @@ $(function() {
     nextButton();
     function nextButton() {
         var allPageClass = ['intro1','intro2','txt1','setOfTaskPage','txt2','txt3','p.txt4','txt4','txt5','txt6','txt6check','txt7pre','txt7','txt7mask'],
-            $next = $('.next');
-            $last = $('.last');
+            $next = $('.next')
+            $last = $('.last')
+            
+            $lastIntro2 = $('.last.intro2')
+            $nextIntro2 = $('.next.intro2')
+            $lastTxt4 = $('.last.txt4')
+            $nextTxt4 = $('.next.txt4')
+            $lastTxt5 = $('.last.txt5')
+            $nextTxt5 = $('.next.txt5')
+            $lastTxt7pre = $('.last.txt7pre')
+            $nextTxt7pre = $('.next.txt7pre');
 
         for (let index = 1; index < allPageClass.length; index++) {
             const element = allPageClass[index];
@@ -171,6 +180,20 @@ $(function() {
                 case 'intro1':  
                     $('.intro1').css('display','none');
                     $('.intro2').css('display','');
+                    $lastIntro2.css({display:'none',opacity: 0}),
+                    $nextIntro2.css({display:'none',opacity: 0});
+                    $lastIntro2
+                        .delay(3000)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextIntro2
+                        .delay(3000)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                     break;
             
                 case 'intro2':
@@ -186,6 +209,7 @@ $(function() {
                 case 'setOfTaskPage':
                     $('.setOfTaskPage').css('display','none');
                     $('.txt2').css('display','');
+                    $('.txt2.next').css('display','none');
                     break;
                     
                 case 'txt2':
@@ -196,6 +220,20 @@ $(function() {
                 case 'txt3':
                     $('.txt3').css('display','none');
                     $('.txt4').css('display','');
+                    $lastTxt4.css({display:'none',opacity: 0}),
+                    $nextTxt4.css({display:'none',opacity: 0});
+                    $lastTxt4
+                        .delay(3500)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextTxt4
+                        .delay(3500)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                     break;
             
                 case 'txt4':
@@ -207,6 +245,20 @@ $(function() {
                     $('.ani2file').css('display','none');
                     $('.ani2filesCheckSingle').css('display','none');
                     $('.option.txt4>img').css('opacity','0');
+                    $lastTxt5.css({display:'none',opacity: 0}),
+                    $nextTxt5.css({display:'none',opacity: 0});
+                    $lastTxt5
+                        .delay(7800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextTxt5
+                        .delay(7800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                     break;
             
                 case 'txt5':
@@ -232,6 +284,20 @@ $(function() {
                     $('.txt7pre').css('display','');
                     $('.option.txt4').css('display','');
                     $('.ani1monitor').css({animation: 'pureFIn 1s 9s 1 both' ,display:''});
+                    $lastTxt7pre.css({display:'none',opacity: 0}),
+                    $nextTxt7pre.css({display:'none',opacity: 0});
+                    $lastTxt7pre
+                        .delay(9800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextTxt7pre
+                        .delay(9800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                     break;
                     
                     case 'txt7pre':
@@ -265,6 +331,20 @@ $(function() {
                 case 'txt1':
                     $('.txt1').css('display','none');
                     $('.intro2').css('display','');
+                    $lastIntro2.css({display:'none',opacity: 0}),
+                    $nextIntro2.css({display:'none',opacity: 0});
+                    $lastIntro2
+                        .delay(3000)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextIntro2
+                        .delay(3000)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                 break;
                 
                 case 'setOfTaskPage':
@@ -285,17 +365,31 @@ $(function() {
                 case 'txt4':
                     $('.txt4').css('display','none');
                     $('.txt3').css('display','');
-                break;
-                
-                case 'txt5':
+                    break;
+                    
+                    case 'txt5':
                     $('p.txt4').css('display','');
                     $('.txt5').css('display','none');
                     $('.nextBtn.txt4').css('display','');
                     $('.option.txt4>img').css('opacity','1');
                     $('.ani1fileSingle').css('display','');
+                    $lastTxt4.css({display:'none',opacity: 0}),
+                    $nextTxt4.css({display:'none',opacity: 0});
+                    $lastTxt4
+                        .delay(3500)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextTxt4
+                        .delay(3500)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                     break;
                     
-                case 'txt6':
+                    case 'txt6':
                     $('.txt4').css('display','');
                     $('p.txt4').css('display','none');
                     $('.txt5').css('display','');
@@ -303,6 +397,22 @@ $(function() {
                     $('.ani2filesCheckSingle').css('display','none');
                     $('.ani2miners').css('display','none');
                     $('.txt6').css('display','none');
+                    $lastTxt4.css({display:'none',opacity: 0}),
+                    $nextTxt4.css({display:'none',opacity: 0});
+                    $lastTxt5.css({display:'none',opacity: 0}),
+                    $nextTxt5.css({display:'none',opacity: 0});
+                    $lastTxt5
+                        .delay(7800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextTxt5
+                        .delay(7800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                 break;
                 
                 case 'txt6check':
@@ -336,12 +446,27 @@ $(function() {
                     $('.txt7mask').css('display','none');
                     $('.option.txt4').css('display','');
                     $('.ani1monitor').css({animation: 'pureFIn 1s 9s 1 both' ,display:''});
+                    $lastTxt7pre.css({display:'none',opacity: 0}),
+                    $nextTxt7pre.css({display:'none',opacity: 0});
+                    $lastTxt7pre
+                        .delay(9800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1}); 
+                            next(); 
+                        });
+                    $nextTxt7pre
+                        .delay(9800)
+                        .queue(function (next) { 
+                            $(this).css({display:'unset',opacity: 1})
+                            next(); 
+                        });
                 break;    
 
                 default:
                     break;
             }
         })
+        
     }
 
     chooseProj();
@@ -435,22 +560,22 @@ $(function() {
                         case -3:
                             $('.topImg img.txt2').attr('src','img/diamondDarkest.png')
                             $('.topImg img.txt3').attr('src','img/diamondDarkest.png')
-                            $('.next.txt2').css('opacity','0');
+                            $('.next.txt2').css('display','none');
                             break;
                         case -1:
                             $('.topImg img.txt2').attr('src','img/diamondDark.png')
                             $('.topImg img.txt3').attr('src','img/diamondDark.png')
-                            $('.next.txt2').css('opacity','1');    
+                            $('.next.txt2').css({display:'unset',opacity: 1});    
                             break;
                         case 1:
                             $('.topImg img.txt2').attr('src','img/diamondLight.png')
                             $('.topImg img.txt3').attr('src','img/diamondLight.png')
-                            $('.next.txt2').css('opacity','1');
+                            $('.next.txt2').css({display:'unset',opacity: 1});
                             break;
                         case 3:
                             $('.topImg img.txt2').attr('src','img/diamondLightest.png')
                             $('.topImg img.txt3').attr('src','img/diamondLightest.png')
-                            $('.next.txt2').css('opacity','1');
+                            $('.next.txt2').css({display:'unset',opacity: 1});
                             break;
                     
                         default:
