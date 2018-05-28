@@ -69,14 +69,15 @@ html(lang="en")
                                         |1152
                                     .introIcon
                                         img(src="img/iconQMark.png", alt="").cursorPt
-                                        img(src="img/iconDown.png", alt="").cursorPt
+                                        a(href="download folder/CarEvaluationDataSet.zip", title="download file") 
+                                            img(src="img/iconDown.png", alt="").cursorPt
                             .setOfTaskPage
                                 h1.setOfTask Setting of the Task
                                 hr
                                 |
                                 .infoTrainingData
                                     h3.setOfTask Information of your training data
-                                    p Number of cases: 63
+                                    p Number of cases: 1699
                                     p Number of features: 6
                                 hr
                                 |
@@ -131,10 +132,10 @@ html(lang="en")
                                     h2 Data
                                     h3 
                                         span Training file
-                                        | TBG.csv
+                                        | CEDS train.csv
                                     h3 
                                         span Prediction file
-                                        | TBG_pred.csv    
+                                        | CEDS_prediction_test.csv    
                                     h3
                                         span Case files
                                         | Null
@@ -213,10 +214,18 @@ html(lang="en")
                                         p Error rate : 
                                             span.percentNumError 3.82
                                             span.percentSym %
-                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        a(href="download folder/CEDS_prediction_result.csv")
+                                            img.cursorPt(src="img/iconDown.png", alt="")
                                         .chartMention
                                             p click download model and prediction
-                                        .circleContainer
+                                        .circleContainer.correct
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
+                                        .circleContainer.err
                                             .circleMaskOuter.left
                                                 .circleMaskInner
                                                     .circleBody
@@ -256,7 +265,7 @@ html(lang="en")
                                             p 0.685
                                 .column
                                     .chart#chart2
-                                        h3 INTERGRATRESD
+                                        h3 Support Vector Machine
                                         p Number of cases : 165.67
                                         p Correct rate : 
                                             span.percentNum 5.42
@@ -264,10 +273,18 @@ html(lang="en")
                                         p Error rate : 
                                             span.percentNumError 5.42
                                             span.percentSym %
-                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        a(href="download folder/CEDS_prediction_result.csv")
+                                            img.cursorPt(src="img/iconDown.png", alt="")
                                         .chartMention
                                             p click download model and prediction
-                                        .circleContainer
+                                        .circleContainer.correct
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
+                                        .circleContainer.err
                                             .circleMaskOuter.left
                                                 .circleMaskInner
                                                     .circleBody
@@ -307,7 +324,7 @@ html(lang="en")
                                             p 0.685
                                 .column
                                     .chart#chart3
-                                        h3 Support Vector Machine
+                                        h3 Artificial Neural Network
                                         p Number of cases : 165.67
                                         p Correct rate : 
                                             span.percentNum 4.38
@@ -315,10 +332,18 @@ html(lang="en")
                                         p Error rate : 
                                             span.percentNumError 4.38
                                             span.percentSym %
-                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        a(href="download folder/CEDS_prediction_result.csv")
+                                            img.cursorPt(src="img/iconDown.png", alt="")
                                         .chartMention
                                             p click download model and prediction
-                                        .circleContainer
+                                        .circleContainer.correct
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
+                                        .circleContainer.err
                                             .circleMaskOuter.left
                                                 .circleMaskInner
                                                     .circleBody
@@ -358,7 +383,7 @@ html(lang="en")
                                             p 0.685
                                 .column
                                     .chart#chart4
-                                        h3 Support Vector Machine
+                                        h3 Decision Tree
                                         p Number of cases : 165.67
                                         p Correct rate : 
                                             span.percentNum 1.42
@@ -366,10 +391,18 @@ html(lang="en")
                                         p Error rate : 
                                             span.percentNumError 1.42
                                             span.percentSym %
-                                        img.cursorPt(src="img/iconDown.png", alt="")
+                                        a(href="download folder/CEDS_prediction_result.csv")
+                                            img.cursorPt(src="img/iconDown.png", alt="")
                                         .chartMention
                                             p click download model and prediction
-                                        .circleContainer
+                                        .circleContainer.correct
+                                            .circleMaskOuter.left
+                                                .circleMaskInner
+                                                    .circleBody
+                                            .circleMaskOuter.right
+                                                .circleMaskInner
+                                                    .circleBody
+                                        .circleContainer.err
                                             .circleMaskOuter.left
                                                 .circleMaskInner
                                                     .circleBody

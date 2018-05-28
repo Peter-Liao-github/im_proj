@@ -78,8 +78,10 @@ $(function() {
 
         $charts.each(function(){
             var $chart = $(this),
-                $circleLeft = $chart.find('.left .circleMaskInner').css({transform: 'rotate(0)'}),
-                $circleRight = $chart.find('.right .circleMaskInner').css({transform: 'rotate(0)'}),
+                $circleLeft = $chart.find('.correct .left .circleMaskInner').css({transform: 'rotate(0)'}),
+                $circleRight = $chart.find('.correct .right .circleMaskInner').css({transform: 'rotate(0)'}),
+                $circleLeftErr = $chart.find('.err .left .circleMaskInner').css({transform: 'rotate(0)'}),
+                $circleRightErr = $chart.find('.err .right .circleMaskInner').css({transform: 'rotate(0)'}),
                 $percentNum = $chart.find('.percentNum'),
                 $percentNumError = $chart.find('.percentNumError'),
                 percentData = 100 - $percentNum.text();
@@ -99,6 +101,19 @@ $(function() {
                     $circleLeft.css({transform: 'rotate(' + degLeft + 'deg)'});
                     $percentNum.text(Math.floor(now * 100)/100);
                     $percentNumError.text(Math.floor((100 - now) * 100)/100);
+                }
+            });
+
+            $({ percent: 0}).delay(800).animate({
+                percent: 100
+            }, {duration:1200,
+                progress: function () {
+                    var now = this.percent,
+                        deg = now * 360/100,
+                        degRight = Math.min(Math.max(deg, 0),180),
+                        degLeft = Math.min(Math.max(deg - 180, 0),180);
+                    $circleRightErr.css({transform: 'rotate(' + degRight + 'deg)'});
+                    $circleLeftErr.css({transform: 'rotate(' + degLeft + 'deg)'});
                 }
             });
         });
@@ -449,7 +464,7 @@ $(function() {
 
     downArrowHover();
     function downArrowHover(){
-        var $imgDown = $('.chart img');
+        var $imgDown = $('.chart a');
         $imgDown.hover(function(){
             var $this = $(this);
             $(this).next().css("display", "block");
