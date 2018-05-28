@@ -19,7 +19,7 @@
           <div class="user"><img src="img/userThumb.png" alt=""/>
             <p class="name">User</p>
             <p class="fColorGrey tokenYours">ATH: <span class="token">1000</span></p>
-            <div class="txt7"><a href="#" title="title"><img class="share" src="img/iconShare.png" alt=""/></a></div>
+            <div class="txt7"><a href="#" title="click and get bonus"><img class="share" src="img/iconShare.png" alt=""/></a></div>
           </div>
           <div class="introCont">
             <h1 class="intro1">About iMLOv</h1>
@@ -27,21 +27,21 @@
             <p class="intro1"> <span>Machine learning is an important technique for data classification and making predictions/decisions based on known data. It is also a key to big data analysis and artificial intelligence. In this digital era when all types of data increase explosively (proteomics, genomics, public health…), it is expectable that learning machine learning will become necessary for biologists and medical scientists in the near future. However, most machine learning software is inconvenient for users unfamiliar with programming or command-line operating. Hence, we develop this non-expert-friendly system iMLOv, which integrates decision tree, support vector machine, artificial neural network, and random forest algorithms. It also utilizes a genetic algorithm to help perform feature selections. Hopefully this system will become a useful tool for scientists to move their fields forward.</span></p>
             <h1 class="intro2">Welcome to experience AIgatha AI pridictive platform, please choose a project you interested.</h1>
             <div class="introOuter intro2">
-              <div class="introCol cursorPt intro2">
+              <div class="introCol cursorPt intro2 projDota">
                 <h3>Dota2 Games Result Data Set</h3><img src="img/proj1.png" alt=""/>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
                 <p><strong>Raw data volumn : </strong>1728</p>
                 <p><strong>Number of training sets : </strong>1152</p>
                 <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
               </div>
-              <div class="introCol cursorPt intro2">
+              <div class="introCol cursorPt intro2 projBank">
                 <h3>Bank</h3><img src="img/proj2.png" alt=""/>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
                 <p><strong>Raw data volumn : </strong>1728</p>
                 <p><strong>Number of training sets : </strong>1152</p>
                 <div class="introIcon"><img class="cursorPt" src="img/iconQMark.png" alt=""/><img class="cursorPt" src="img/iconDown.png" alt=""/></div>
               </div>
-              <div class="introCol cursorPt intro2">
+              <div class="introCol cursorPt intro2 projCar">
                 <h3>Car Evaluation Data Set</h3><img src="img/proj3.png" alt=""/>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.</p>
                 <p><strong>Raw data volumn : </strong>1728</p>
@@ -136,324 +136,962 @@
                 </div>
               </div>
               <div class="txt7">
-                <div class="column">
-                  <div class="chart" id="chart1">
-                    <h3>INTERGRATRESD</h3>
-                    <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">3.82</span><span class="percentSym">%</span></p>
-                    <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
-                    <div class="chartMention">
-                      <p>click download model and prediction</p>
+                <div class="projDota">
+                  <div class="column">
+                    <div class="chart" id="chart1">
+                      <h3>INTERGRATRESD(Dota)</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">96.18</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
+                      </div>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="circleContainer correct">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.985</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.685</p>
                       </div>
-                    </div>
-                    <div class="circleContainer err">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.585</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
                       </div>
                     </div>
                   </div>
-                  <div class="chartProgress">
-                    <div class="chartProgItem">
-                      <h4>AUC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  <div class="column">
+                    <div class="chart" id="chart2">
+                      <h3>Support Vector Machine</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">94.58</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.985</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>SEN</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.685</p>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.785</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>SPC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  </div>
+                  <div class="column">
+                    <div class="chart" id="chart3">
+                      <h3>Artificial Neural Network</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">95.62</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.585</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>FPR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.225</p>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.785</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>FNR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  </div>
+                  <div class="column">
+                    <div class="chart" id="chart4">
+                      <h3>Decision Tree</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">98.58</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.050</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>MCC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.685</p>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.285</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="column">
-                  <div class="chart" id="chart2">
-                    <h3>Support Vector Machine</h3>
-                    <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">5.42</span><span class="percentSym">%</span></p>
-                    <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
-                    <div class="chartMention">
-                      <p>click download model and prediction</p>
+                <div class="projBank">
+                  <div class="column">
+                    <div class="chart" id="chart1">
+                      <h3>INTERGRATRESD(Bank)</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">96.18</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
+                      </div>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="circleContainer correct">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.985</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.685</p>
                       </div>
-                    </div>
-                    <div class="circleContainer err">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.585</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
                       </div>
                     </div>
                   </div>
-                  <div class="chartProgress">
-                    <div class="chartProgItem">
-                      <h4>AUC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  <div class="column">
+                    <div class="chart" id="chart2">
+                      <h3>Support Vector Machine</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">94.58</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.985</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>SEN</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.985</p>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.785</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>SPC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  </div>
+                  <div class="column">
+                    <div class="chart" id="chart3">
+                      <h3>Artificial Neural Network</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">96.62</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.785</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>FPR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.225</p>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.785</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>FNR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  </div>
+                  <div class="column">
+                    <div class="chart" id="chart4">
+                      <h3>Decision Tree</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">98.58</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.050</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>MCC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.685</p>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.285</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="column">
-                  <div class="chart" id="chart3">
-                    <h3>Artificial Neural Network</h3>
-                    <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">4.38</span><span class="percentSym">%</span></p>
-                    <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
-                    <div class="chartMention">
-                      <p>click download model and prediction</p>
+                <div class="projCar">
+                  <div class="column">
+                    <div class="chart" id="chart1">
+                      <h3>INTERGRATRESD</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">96.18</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">3.82</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
+                      </div>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="circleContainer correct">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.985</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.685</p>
                       </div>
-                    </div>
-                    <div class="circleContainer err">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.585</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
                       </div>
                     </div>
                   </div>
-                  <div class="chartProgress">
-                    <div class="chartProgItem">
-                      <h4>AUC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  <div class="column">
+                    <div class="chart" id="chart2">
+                      <h3>Support Vector Machine</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">94.58</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">5.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.985</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>SEN</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.985</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>SPC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.785</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>FPR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.785</p>
                       </div>
-                      <p>0.225</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>FNR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
                       </div>
-                      <p>0.050</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>MCC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
                       </div>
-                      <p>0.685</p>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="column">
-                  <div class="chart" id="chart4">
-                    <h3>Decision Tree</h3>
-                    <p>Number of cases : 165.67</p>
-                    <p>Correct rate : <span class="percentNum">1.42</span><span class="percentSym">%</span></p>
-                    <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
-                    <div class="chartMention">
-                      <p>click download model and prediction</p>
+                  <div class="column">
+                    <div class="chart" id="chart3">
+                      <h3>Artificial Neural Network</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">95.62</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">4.38</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
+                      </div>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="circleContainer correct">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.985</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.985</p>
                       </div>
-                    </div>
-                    <div class="circleContainer err">
-                      <div class="circleMaskOuter left">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.785</p>
                       </div>
-                      <div class="circleMaskOuter right">
-                        <div class="circleMaskInner">
-                          <div class="circleBody"></div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
                         </div>
+                        <p>0.225</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
+                      </div>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
                       </div>
                     </div>
                   </div>
-                  <div class="chartProgress">
-                    <div class="chartProgItem">
-                      <h4>AUC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                  <div class="column">
+                    <div class="chart" id="chart4">
+                      <h3>Decision Tree</h3>
+                      <p>Number of cases : 165.67</p>
+                      <p>Correct rate : <span class="percentNum">98.58</span><span class="percentSym">%</span></p>
+                      <p>Error rate : <span class="percentNumError">1.42</span><span class="percentSym">%</span></p><a href="download folder/CEDS_prediction_result.csv"><img class="cursorPt" src="img/iconDown.png" alt=""/></a>
+                      <div class="chartMention">
+                        <p>click download model and prediction</p>
                       </div>
-                      <p>0.985</p>
+                      <div class="circleContainer correct">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="circleContainer err">
+                        <div class="circleMaskOuter left">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                        <div class="circleMaskOuter right">
+                          <div class="circleMaskInner">
+                            <div class="circleBody"></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chartProgItem">
-                      <h4>SEN</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                    <div class="chartProgress">
+                      <div class="chartProgItem">
+                        <h4>AUC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.985</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>SPC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>SEN</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.985</p>
                       </div>
-                      <p>0.285</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>FPR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>SPC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.285</p>
                       </div>
-                      <p>0.225</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>FNR</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>FPR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.225</p>
                       </div>
-                      <p>0.050</p>
-                    </div>
-                    <div class="chartProgItem">
-                      <h4>MCC</h4>
-                      <div class="progressOuter">
-                        <div class="progressInner"></div>
+                      <div class="chartProgItem">
+                        <h4>FNR</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.050</p>
                       </div>
-                      <p>0.685</p>
+                      <div class="chartProgItem">
+                        <h4>MCC</h4>
+                        <div class="progressOuter">
+                          <div class="progressInner"></div>
+                        </div>
+                        <p>0.685</p>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="columnFooter">
-                  <p>Thank you, click the right button to share this experience and get rewards.</p>
+                  <p>Thank you, click the left button to share this experience and get rewards.</p>
                 </div>
               </div>
               <div class="txt7mask"></div>

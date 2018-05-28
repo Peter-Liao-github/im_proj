@@ -1,5 +1,5 @@
 $(function() {
-    
+
     activeCost();
     function activeCost(){
         var $returnTime = $('.topImg .txt6 p:nth-of-type(2)'),
@@ -84,7 +84,7 @@ $(function() {
                 $circleRightErr = $chart.find('.err .right .circleMaskInner').css({transform: 'rotate(0)'}),
                 $percentNum = $chart.find('.percentNum'),
                 $percentNumError = $chart.find('.percentNumError'),
-                percentData = 100 - $percentNum.text();
+                percentData = $percentNum.text();
 
             $percentNum.text(0);
             $percentNumError.text(0);
@@ -301,6 +301,7 @@ $(function() {
                     $('.txt5').css('display','');
                     $('.ani2file').css('display','none');
                     $('.ani2filesCheckSingle').css('display','none');
+                    $('.ani2miners').css('display','none');
                     $('.txt6').css('display','none');
                 break;
                 
@@ -320,6 +321,7 @@ $(function() {
                     $('.ani1fileSliced').css({animation: 'ani1fileSlicedFIn 3s 0.5s 1 both' ,display:'none'});
                     $('.txt7pre').css('display','none');
                     $('.option.txt4').css('display','none');
+                    $('.ani1monitor').css({animation: 'unset' ,display:''});
                 break;
                     
                 case 'txt7':
@@ -349,6 +351,27 @@ $(function() {
             $this = $(this)
             $choice.css({boxShadow:'unset', opacity:0.6, filter: 'grayscale(20%)', webkitFilter: 'grayscale(20%)'})
             $this.css({boxShadow:'0px 0px 4px 4px #E3C136', opacity:1, filter: 'grayscale(0%)', webkitFilter: 'grayscale(0%)'})
+            var $choose = $this.attr('class').substr(29)
+                $txt7 = $('.txt7');
+            switch ($choose) {
+                case 'Dota':
+                    $txt7.find('.projDota').css('display','unset')
+                    $txt7.find('.projBank').css('display','none')
+                    $txt7.find('.projCar').css('display','none')
+                    break;
+                case 'Bank':
+                    $txt7.find('.projDota').css('display','none')
+                    $txt7.find('.projBank').css('display','unset')
+                    $txt7.find('.projCar').css('display','none')
+                    break;
+                case 'Car':
+                    $txt7.find('.projDota').css('display','none')
+                    $txt7.find('.projBank').css('display','none')
+                    $txt7.find('.projCar').css('display','unset')
+                    break;
+                default:
+                    break;
+            }
         })
     }
 

@@ -22,7 +22,7 @@ html(lang="en")
                         p.fColorGrey.tokenYours ATH: 
                             span.token 1000
                         .txt7
-                            a(href="#", title="title")
+                            a(href="#", title="click and get bonus")
                                 img(src="img/iconShare.png", alt="").share 
                     .introCont
                             h1.intro1 About iMLOv
@@ -31,7 +31,7 @@ html(lang="en")
                                 span Machine learning is an important technique for data classification and making predictions/decisions based on known data. It is also a key to big data analysis and artificial intelligence. In this digital era when all types of data increase explosively (proteomics, genomics, public health…), it is expectable that learning machine learning will become necessary for biologists and medical scientists in the near future. However, most machine learning software is inconvenient for users unfamiliar with programming or command-line operating. Hence, we develop this non-expert-friendly system iMLOv, which integrates decision tree, support vector machine, artificial neural network, and random forest algorithms. It also utilizes a genetic algorithm to help perform feature selections. Hopefully this system will become a useful tool for scientists to move their fields forward.
                             h1.intro2 Welcome to experience AIgatha AI pridictive platform, please choose a project you interested.
                             .introOuter.intro2
-                                .introCol.cursorPt.intro2
+                                .introCol.cursorPt.intro2.projDota
                                     h3 Dota2 Games Result Data Set
                                     img(src="img/proj1.png", alt="")
                                     p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
@@ -44,7 +44,7 @@ html(lang="en")
                                     .introIcon
                                         img(src="img/iconQMark.png", alt="").cursorPt
                                         img(src="img/iconDown.png", alt="").cursorPt
-                                .introCol.cursorPt.intro2
+                                .introCol.cursorPt.intro2.projBank
                                     h3 Bank
                                     img(src="img/proj2.png", alt="")
                                     p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
@@ -57,7 +57,7 @@ html(lang="en")
                                     .introIcon
                                         img(src="img/iconQMark.png", alt="").cursorPt
                                         img(src="img/iconDown.png", alt="").cursorPt
-                                .introCol.cursorPt.intro2
+                                .introCol.cursorPt.intro2.projCar
                                     h3 Car Evaluation Data Set
                                     img(src="img/proj3.png", alt="")
                                     p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam voluptatem accusantium iste quae, laudantium animi enim magnam quis cumque possimus inventore.
@@ -204,244 +204,719 @@ html(lang="en")
                                         span Quick optimization
                                         | Yes
                             .txt7
-                                .column
-                                    .chart#chart1
-                                        h3 INTERGRATRESD
-                                        p Number of cases : 165.67
-                                        p Correct rate : 
-                                            span.percentNum 3.82
-                                            span.percentSym %
-                                        p Error rate : 
-                                            span.percentNumError 3.82
-                                            span.percentSym %
-                                        a(href="download folder/CEDS_prediction_result.csv")
-                                            img.cursorPt(src="img/iconDown.png", alt="")
-                                        .chartMention
-                                            p click download model and prediction
-                                        .circleContainer.correct
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                        .circleContainer.err
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                    .chartProgress
-                                        .chartProgItem
-                                            h4 AUC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SEN
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.685
-                                        .chartProgItem
-                                            h4 SPC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.585
-                                        .chartProgItem
-                                            h4 FPR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.225
-                                        .chartProgItem
-                                            h4 FNR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.050
-                                        .chartProgItem
-                                            h4 MCC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.685
-                                .column
-                                    .chart#chart2
-                                        h3 Support Vector Machine
-                                        p Number of cases : 165.67
-                                        p Correct rate : 
-                                            span.percentNum 5.42
-                                            span.percentSym %
-                                        p Error rate : 
-                                            span.percentNumError 5.42
-                                            span.percentSym %
-                                        a(href="download folder/CEDS_prediction_result.csv")
-                                            img.cursorPt(src="img/iconDown.png", alt="")
-                                        .chartMention
-                                            p click download model and prediction
-                                        .circleContainer.correct
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                        .circleContainer.err
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                    .chartProgress
-                                        .chartProgItem
-                                            h4 AUC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SEN
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SPC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.785
-                                        .chartProgItem
-                                            h4 FPR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.225
-                                        .chartProgItem
-                                            h4 FNR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.050
-                                        .chartProgItem
-                                            h4 MCC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.685
-                                .column
-                                    .chart#chart3
-                                        h3 Artificial Neural Network
-                                        p Number of cases : 165.67
-                                        p Correct rate : 
-                                            span.percentNum 4.38
-                                            span.percentSym %
-                                        p Error rate : 
-                                            span.percentNumError 4.38
-                                            span.percentSym %
-                                        a(href="download folder/CEDS_prediction_result.csv")
-                                            img.cursorPt(src="img/iconDown.png", alt="")
-                                        .chartMention
-                                            p click download model and prediction
-                                        .circleContainer.correct
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                        .circleContainer.err
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                    .chartProgress
-                                        .chartProgItem
-                                            h4 AUC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SEN
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SPC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.785
-                                        .chartProgItem
-                                            h4 FPR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.225
-                                        .chartProgItem
-                                            h4 FNR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.050
-                                        .chartProgItem
-                                            h4 MCC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.685
-                                .column
-                                    .chart#chart4
-                                        h3 Decision Tree
-                                        p Number of cases : 165.67
-                                        p Correct rate : 
-                                            span.percentNum 1.42
-                                            span.percentSym %
-                                        p Error rate : 
-                                            span.percentNumError 1.42
-                                            span.percentSym %
-                                        a(href="download folder/CEDS_prediction_result.csv")
-                                            img.cursorPt(src="img/iconDown.png", alt="")
-                                        .chartMention
-                                            p click download model and prediction
-                                        .circleContainer.correct
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                        .circleContainer.err
-                                            .circleMaskOuter.left
-                                                .circleMaskInner
-                                                    .circleBody
-                                            .circleMaskOuter.right
-                                                .circleMaskInner
-                                                    .circleBody
-                                    .chartProgress
-                                        .chartProgItem
-                                            h4 AUC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SEN
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.985
-                                        .chartProgItem
-                                            h4 SPC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.285
-                                        .chartProgItem
-                                            h4 FPR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.225
-                                        .chartProgItem
-                                            h4 FNR
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.050
-                                        .chartProgItem
-                                            h4 MCC
-                                            .progressOuter
-                                                .progressInner
-                                            p 0.685
+                                .projDota
+                                    .column
+                                        .chart#chart1
+                                            h3 INTERGRATRESD(Dota)
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 96.18
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 3.82
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.585
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart2
+                                            h3 Support Vector Machine
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 94.58
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 5.42
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.785
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart3
+                                            h3 Artificial Neural Network
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 95.62
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 4.38
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.785
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart4
+                                            h3 Decision Tree
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 98.58
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 1.42
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.285
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                .projBank
+                                    .column
+                                        .chart#chart1
+                                            h3 INTERGRATRESD(Bank)
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 96.18
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 3.82
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.585
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart2
+                                            h3 Support Vector Machine
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 94.58
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 5.42
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.785
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart3
+                                            h3 Artificial Neural Network
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 96.62
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 4.38
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.785
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart4
+                                            h3 Decision Tree
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 98.58
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 1.42
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.285
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                .projCar
+                                    .column
+                                        .chart#chart1
+                                            h3 INTERGRATRESD
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 96.18
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 3.82
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.585
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart2
+                                            h3 Support Vector Machine
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 94.58
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 5.42
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.785
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart3
+                                            h3 Artificial Neural Network
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 95.62
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 4.38
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.785
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
+                                    .column
+                                        .chart#chart4
+                                            h3 Decision Tree
+                                            p Number of cases : 165.67
+                                            p Correct rate : 
+                                                span.percentNum 98.58
+                                                span.percentSym %
+                                            p Error rate : 
+                                                span.percentNumError 1.42
+                                                span.percentSym %
+                                            a(href="download folder/CEDS_prediction_result.csv")
+                                                img.cursorPt(src="img/iconDown.png", alt="")
+                                            .chartMention
+                                                p click download model and prediction
+                                            .circleContainer.correct
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                            .circleContainer.err
+                                                .circleMaskOuter.left
+                                                    .circleMaskInner
+                                                        .circleBody
+                                                .circleMaskOuter.right
+                                                    .circleMaskInner
+                                                        .circleBody
+                                        .chartProgress
+                                            .chartProgItem
+                                                h4 AUC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SEN
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.985
+                                            .chartProgItem
+                                                h4 SPC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.285
+                                            .chartProgItem
+                                                h4 FPR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.225
+                                            .chartProgItem
+                                                h4 FNR
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.050
+                                            .chartProgItem
+                                                h4 MCC
+                                                .progressOuter
+                                                    .progressInner
+                                                p 0.685
                                 .columnFooter
-                                    p Thank you, click the right button to share this experience and get rewards.
+                                    p Thank you, click the left button to share this experience and get rewards.
                             .txt7mask
                         .textBlock
                             p.txt1 Hi, welcome to IM platform, Everyone have 100,000 ATH to exprience this game, choose your project first.
