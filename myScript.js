@@ -384,6 +384,7 @@ $(function() {
                 $('.introCont').css('color','#fff')
                 $('.mainContent').css('color','#fff')
                 $('.fColorGrey').addClass('fColorWhite')
+                $('input[disabled]').css('color','#fff')
                 $('img[src="img/diamondDarkest.png"]').attr('src','img/diamondDarkestB.png')
                 $('img[src="img/diamondDark.png"]').attr('src','img/diamondDarkB.png')
                 $('img[src="img/diamondLight.png"]').attr('src','img/diamondLightB.png')
@@ -395,6 +396,7 @@ $(function() {
                 $('.outerContainer>.bgi>img').attr('src','img/bgi1.png');
                 $('.introCont').css('color','#898989')
                 $('.mainContent').css('color','#898989')
+                $('input[disabled]').css('color','#000')
                 $('img[src="img/diamondDarkestB.png"]').attr('src','img/diamondDarkest.png')
                 $('img[src="img/diamondDarkB.png"]').attr('src','img/diamondDark.png')
                 $('img[src="img/diamondLightB.png"]').attr('src','img/diamondLight.png')
